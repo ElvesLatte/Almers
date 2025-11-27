@@ -10,23 +10,35 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "ring";
+    src: url("./fonts/ringbearer.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    background: #E2F2DB;
-    background: -webkit-linear-gradient(to right, #ccded8, #F2E9D8);
-    background: linear-gradient(to right, #ccded8, #F2E9D8);
-    font-family: "Morris Roman", serif;
+    background-image:  url(imagenes/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   
+    font-family: "ring", serif;
     padding: auto;
     margin: 20px;
 }
 
+
 header {
-    background-color: #b0ccb8;
+    background-color:#182D09;
+    border: 60px solid ;
+    border-image: url(imagenes/frame_gold.png) 150 stretch;
     padding: 10px;
     text-align: center;
-    font-family: "Morris Roman", serif;
+    font-family: "ring", serif;
     font-size: 40px;
-    color: #dab143;
+    color:#d9d9d9;
+    background: linear-gradient (135deg, #e5e4e2 , #efefee);
     border-radius: 15px;
 }
 
@@ -46,7 +58,7 @@ div.text {
 }
 
 .section-title {
-    background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
+    background: linear-gradient(135deg, #182D09 0%, #D7E2CE 100%);
     border: 3px solid #C49B2A;
     border-radius: 10px;
     padding: 20px;
