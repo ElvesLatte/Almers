@@ -10,40 +10,174 @@
     font-weight: normal;
     font-style: normal;
 }
-header{
-    background-color:#b0ccb8;
+
+body {
+    background: #E2F2DB;
+    background: -webkit-linear-gradient(to right, #ccded8, #F2E9D8);
+    background: linear-gradient(to right, #ccded8, #F2E9D8);
+    font-family: "Morris Roman", serif;
+    padding: auto;
+    margin: 20px;
+}
+
+header {
+    background-color: #b0ccb8;
     padding: 10px;
     text-align: center;
     font-family: "Morris Roman", serif;
     font-size: 40px;
     color: #dab143;
     border-radius: 15px;
-    ;
 }
-body{
-    background: #E2F2DB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ccded8, #F2E9D8);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ccded8, #F2E9D8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    font-family: "Morris Roman", serif ;
-    padding: auto;
-    margin: 20px;
-}
-h1_code{
-    font-family: "Tengwar Annatar", serif;
-    font-size: 40px;
-    color: #C49B2A;
-}
-div.info{
+div.info {
     background-color: #F2E9D8;
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;
 }
-div.text{
+
+div.text {
     background-color: #ccded8;
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;
     color: #3E4E41;
+}
+
+.section-title {
+    background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
+    border: 3px solid #C49B2A;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.section-title h2 {
+    color: #F2E9D8;
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+
+.entry-box {
+    background: linear-gradient(to bottom, #F2E9D8 0%, #E8DCC8 100%);
+    border: 2px solid #8B7355;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.entry-box::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #C49B2A;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.category-title {
+    color: #8B7355;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px double #C49B2A;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+.trait-entry {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 4px solid #A0826D;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+.trait-entry:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.trait-entry h4 {
+    color: #5D4E37;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.trait-entry p {
+    color: #3E4E41;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/*
+   MENSAJES SECRETOS EN TENGWAR
+   Estilo: El Anillo Único
+ */
+
+/* Secreto en línea - Para usar dentro de texto */
+.elvish-secret {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 18px;
+    color: #C49B2A;
+    text-shadow: 0 0 8px rgba(196, 155, 42, 0.5);
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.elvish-secret:hover {
+    color: #FFD700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Runa élfica - Mensajes medianos centrados */
+.elvish-rune {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 28px;
+    color: #C49B2A;
+    text-align: center;
+    padding: 15px;
+    margin: 20px 0;
+    background: rgba(139, 115, 85, 0.1);
+    border-top: 1px solid #C49B2A;
+    border-bottom: 1px solid #C49B2A;
+    text-shadow: 0 0 10px rgba(196, 155, 42, 0.4);
+    letter-spacing: 3px;
+}
+
+/* Conocimiento oculto - Bloques de lore secreto */
+.hidden-lore {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 22px;
+    color: #A0826D;
+    background: linear-gradient(to right, transparent, rgba(196, 155, 42, 0.15), transparent);
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.hidden-lore:hover {
+    opacity: 1;
+    color: #C49B2A;
+    text-shadow: 0 0 12px rgba(196, 155, 42, 0.6);
 }
