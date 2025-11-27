@@ -1,0 +1,25 @@
+
+body {
+    background-image: url(imagenes/fondito.png);
+
+}
+
+h1 {
+    align-items: center; 
+}
+.div a{
+    padding: auto;
+
+
+}
+a :hover {
+
+
+}
+
+header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    
+}
