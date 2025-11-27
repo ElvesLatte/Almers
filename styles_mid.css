@@ -6,14 +6,44 @@
 }
 @font-face {
     font-family: "Morris Roman";
-    src: url("./fonts/morris-roman.ttf") format("truetype");
+    src: url("./fonts/MorrisRomanBlack.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
+header{
+    background-color:#b0ccb8;
+    padding: 10px;
+    text-align: center;
+    font-family: "Morris Roman", serif;
+    font-size: 40px;
+    color: #dab143;
+    border-radius: 15px;
+    ;
+}
 body{
-    background-color:#E2F2DB ;
+    background: #E2F2DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ccded8, #F2E9D8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ccded8, #F2E9D8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-family: "Morris Roman", serif ;
+    padding: auto;
+    margin: 20px;
 }
 h1_code{
     font-family: "Tengwar Annatar", serif;
+    font-size: 40px;
+    color: #C49B2A;
+}
+div.info{
+    background-color: #F2E9D8;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+div.text{
+    background-color: #ccded8;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #3E4E41;
 }
