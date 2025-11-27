@@ -5,12 +5,6 @@
     font-style: normal;
 }
 @font-face {
-    font-family: "Morris Roman";
-    src: url("./fonts/MorrisRomanBlack.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: "ring";
     src: url("./fonts/ringbearer.ttf") format("truetype");
     font-weight: normal;
@@ -58,7 +52,7 @@ div.text {
 }
 
 .section-title {
-    background: linear-gradient(135deg, #182D09 0%, #D7E2CE 100%);
+    background: linear-gradient(135deg, #213b0e , #b1c5a0 );
     border: 3px solid #C49B2A;
     border-radius: 10px;
     padding: 20px;
@@ -136,10 +130,7 @@ div.text {
     font-size: 16px;
 }
 
-/*
-   MENSAJES SECRETOS EN TENGWAR
-   Estilo: El Anillo Único
- */
+*MENSAJES SECRETOS EN TENGWAR
 
 /* Secreto en línea - Para usar dentro de texto */
 .elvish-secret {
