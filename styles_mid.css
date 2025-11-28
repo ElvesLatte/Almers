@@ -1,9 +1,11 @@
+
 @font-face {
     font-family: "Tengwar Annatar";
     src: url("./fonts/tngan.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "ring";
     src: url("./fonts/ringbearer.ttf") format("truetype");
@@ -12,7 +14,7 @@
 }
 
 body {
-    background-image:  url(imagenes/fondo.png);
+    background-image: url(imagenes/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,29 +24,28 @@ body {
     margin: 20px;
 }
 
-
 header {
-    background-color:#182D09;
-    border: 60px solid ;
+    background-color: #182D09;
+    border: 60px solid;
     border-image: url(imagenes/frame_gold.png) 150 stretch;
     padding: 10px;
     text-align: center;
     font-family: "ring", serif;
     font-size: 40px;
-    color:#d9d9d9;
-    background: linear-gradient (135deg, #e5e4e2 , #efefee);
+    color: #d9d9d9;
     border-radius: 15px;
 }
 
 div.info {
-    background-color: #F2E9D8;
+    background-color: rgba(242, 233, 216, 0.9);
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 div.text {
-    background-color: #ccded8;
+    background-color: rgba(204, 222, 216, 0.9);
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;
@@ -52,7 +53,7 @@ div.text {
 }
 
 .section-title {
-    background: linear-gradient(135deg, #213b0e , #b1c5a0 );
+    background: linear-gradient(135deg, #213b0e, #b1c5a0);
     border: 3px solid #C49B2A;
     border-radius: 10px;
     padding: 20px;
@@ -69,8 +70,15 @@ div.text {
     letter-spacing: 2px;
 }
 
+.section-title p {
+    color: #d9d9d9;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 .entry-box {
-    background: linear-gradient(to bottom, #F2E9D8 0%, #E8DCC8 100%);
+    background: linear-gradient(to bottom, rgba(242, 233, 216, 0.95) 0%, rgba(232, 220, 200, 0.95) 100%);
     border: 2px solid #8B7355;
     border-radius: 12px;
     padding: 25px;
@@ -101,7 +109,6 @@ div.text {
     letter-spacing: 1px;
 }
 
-
 .trait-entry {
     background-color: rgba(255, 255, 255, 0.4);
     border-left: 4px solid #A0826D;
@@ -130,9 +137,16 @@ div.text {
     font-size: 16px;
 }
 
-*MENSAJES SECRETOS EN TENGWAR
+.trait-entry ul {
+    margin: 10px 0 0 20px;
+    line-height: 1.8;
+}
 
-/* Secreto en línea - Para usar dentro de texto */
+.trait-entry li {
+    color: #3E4E41;
+    margin: 5px 0;
+}
+
 .elvish-secret {
     font-family: "Tengwar Annatar", serif;
     font-size: 18px;
@@ -149,7 +163,6 @@ div.text {
     transform: scale(1.05);
 }
 
-/* Runa élfica - Mensajes medianos centrados */
 .elvish-rune {
     font-family: "Tengwar Annatar", serif;
     font-size: 28px;
@@ -164,7 +177,6 @@ div.text {
     letter-spacing: 3px;
 }
 
-/* Conocimiento oculto - Bloques de lore secreto */
 .hidden-lore {
     font-family: "Tengwar Annatar", serif;
     font-size: 22px;
