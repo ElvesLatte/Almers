@@ -1,12 +1,11 @@
-/* ========== Estilos Generales ========== */
-
 /* ========== Página Kingdoms ========== */
 body.kingdoms {
     background-image: url(imagenes/fondito.png);
+    background-attachment: fixed;
 }
 
+/* ========== Tipografía ========== */
 h1 {
-    align-items: center; 
     color: #e6d48f;
 }
 
@@ -16,20 +15,19 @@ h2 {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-a {
-    text-decoration: none;
-}
-
 h2:hover {
     color: #5FFFF0;
     text-shadow: 0 0 15px rgba(63, 226, 210, 0.6);
 }
 
 p {
-    color: #F5F2E8};
+    color: #F5F2E8;
+}
 
+a {
+    text-decoration: none;
+}
 
-/* ========== Navegación ========== */
 header {
     display: flex;
     align-items: center;
@@ -59,25 +57,25 @@ nav a:active {
     transform: scale(0.95);
 }
 
-img {
+nav img {
     width: 90px;
-    transition: filter 0.3s ease;
 }
 
 /* ========== Artículos de Reinos ========== */
 main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 article {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -85,9 +83,22 @@ article:hover {
     transform: translateY(-5px);
 }
 
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
 .kingdom-img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -95,36 +106,30 @@ article:hover {
 }
 
 .kingdom-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
     filter: brightness(1.1);
 }
 
-.kingdom-content {
-    flex: 1;
-}
-
 .kingdom-content h2 {
     margin-top: 0;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .kingdom-content p {
     font-size: 1.1em;
-    line-height: 1.6;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-/* ========== Reino: Menzoberranzan ========== */
-#menzoberranzan {
-    color: #e6d48f;
-}
+/*Menzoberranza */
 
-/* ========== Reino: Alfheim ========== */
-#alfheim {
-    color: #e6d48f;
-}
-
-/* ========== Reino: Valinor ========== */
-#valinor {
-    color: #e6d48f;
+body.Menzoberranzan {
+background: linear-gradient(
+    180deg,
+    #3d2760 0%,
+    #12213a 30%,
+    #135b72 100%
+);
+    background-attachment: fixed;
 }
