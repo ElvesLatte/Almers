@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'ring';
-    src: url("ringbearer.TTF") format('woff2');
+    src: url("ringbearer.TTF") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,32 +17,26 @@
     font-family: sans-serif;
 }
 body {
-    background-image: url('fondo/fondo.png'); /* Reemplaza 'img/mi-imagen.jpg' con la ruta correcta */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size:cover;
-    background-position: 100%px; /* Asegura que la imagen cubra toda la pantalla */
-    background-position: cover; 
-    font-family: "ring";/* Centra la imagen */
-    color: rgb(0, 0, 0); /* Opcional: cambia el color del texto para que sea visible sobre la imagen */
-}
-body {
+    background-image: url('fondo/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "ring", sans-serif;
+    color: rgb(0, 0, 0);
     width: 100%;
-    min-height:100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "ring";
 }
-
 .container {
     width: 80%;
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding:20px 0;
+    padding: 20px 0;
     margin: 0 auto;
 }
-
 .card {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -51,7 +45,6 @@ body {
     overflow: hidden;
     padding-bottom: 20px;
 }
-
 .card img {
     width: 400px;
     height: auto;
@@ -59,24 +52,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
 }
-
 .card figure{
     height: 400px;
 }
-
 .card figure img{
     height: 100%;
     width: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
-
 .card:hover{
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
 }
-
 .titulo{
-    font-family: "ring";
+    font-family: "ring", sans-serif;
     font-size: 16px;
     text-align: center;
     margin: 0 auto;
