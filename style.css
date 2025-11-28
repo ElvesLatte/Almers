@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'ring';
+    src: url("ringbearer.TTF") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tang';
+    src: url("tngan.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     padding: 0;
     margin: 0; 
@@ -9,7 +21,8 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-size:cover;
     background-position: 100%px; /* Asegura que la imagen cubra toda la pantalla */
-    background-position: cover; /* Centra la imagen */
+    background-position: cover; 
+    font-family: "ring";/* Centra la imagen */
     color: rgb(0, 0, 0); /* Opcional: cambia el color del texto para que sea visible sobre la imagen */
 }
 body {
@@ -18,6 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "ring";
 }
 
 .container {
@@ -62,6 +76,7 @@ body {
 }
 
 .titulo{
+    font-family: "ring";
     font-size: 16px;
     text-align: center;
     margin: 0 auto;
