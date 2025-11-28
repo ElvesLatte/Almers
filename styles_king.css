@@ -1,26 +1,37 @@
+/* ========== Estilos Generales ========== */
 
-body {
+/* ========== Página Kingdoms ========== */
+body.kingdoms {
     background-image: url(imagenes/fondito.png);
-
 }
 
 h1 {
     align-items: center; 
-    color: e6d48f;
+    color: #e6d48f;
 }
 
-img{
-    width: 90px;
-}
-
-
+/* ========== Navegación ========== */
 header {
     display: flex;
     align-items: center; 
     justify-content: space-between;
-
 }
 
-section{
-    color: e6d48f;
+img {
+    width: 90px;
+}
+
+/* ========== Reino: Menzoberranzan ========== */
+#menzoberranzan {
+    color: #e6d48f;
+}
+
+/* ========== Reino: Alfheim ========== */
+#alfheim {
+    color: #e6d48f;
+}
+
+/* ========== Reino: Valinor ========== */
+#valinor {
+    color: #e6d48f;
 }
