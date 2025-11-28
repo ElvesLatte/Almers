@@ -368,22 +368,22 @@ div.text {
     }
 }
 
-/* Portal 3 - MORADO/AZUL OSCURO */
+/* Portal 3 - AZUL OSCURO */
 .portal-wrapper:nth-child(3) .portal-link:hover .portal-image {
-    filter: brightness(1.3) drop-shadow(0 0 20px rgba(138, 43, 226, 0.8)) drop-shadow(0 0 40px rgba(138, 43, 226, 0.6));
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(10, 30, 120, 0.8)) drop-shadow(0 0 40px rgba(10, 30, 120, 0.6));
     transform: scale(1.05);
 }
 
 .portal-wrapper:nth-child(3) .portal-link:hover {
-    animation: portal-pulse-purple 1.5s ease-in-out infinite;
+    animation: portal-pulse-blue 1.5s ease-in-out infinite;
 }
 
-@keyframes portal-pulse-purple {
+@keyframes portal-pulse-blue {
     0%, 100% {
-        filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.5));
+        filter: drop-shadow(0 0 10px rgba(10, 30, 120, 0.5));
     }
     50% {
-        filter: drop-shadow(0 0 25px rgba(138, 43, 226, 0.9));
+        filter: drop-shadow(0 0 25px rgba(10, 30, 120, 0.9));
     }
 }
 
