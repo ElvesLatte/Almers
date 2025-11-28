@@ -1,37 +1,30 @@
 @font-face {
-    font-family: 'ring';
-    src: url("ringbearer.TTF") format('woff2');
+    font-family: 'Ringbearer';
+    src: url('fonts/ringbearer.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'tang';
-    src: url("tngan.ttf") format('truetype');
+    font-family: 'Tngan';
+    src: url('fonts/tngan.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 *{
     padding: 0;
-    margin: 0; 
+    margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 body {
-    background-image: url('fondo/fondo.png'); /* Reemplaza 'img/mi-imagen.jpg' con la ruta correcta */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size:cover;
-    background-position: 100%px; /* Asegura que la imagen cubra toda la pantalla */
-    background-position: cover; 
-    font-family: "ring";/* Centra la imagen */
-    color: rgb(0, 0, 0); /* Opcional: cambia el color del texto para que sea visible sobre la imagen */
-}
-body {
+    margin: 0;
     width: 100%;
-    min-height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "ring";
+    min-height: 100vh;
+    background-image: url('fondo/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #000;
+    font-family: 'Ringbearer', serif;
 }
 
 .container {
@@ -40,12 +33,11 @@ body {
     justify-content: center;
     gap: 60px;
     padding:20px 0;
-    margin: 0 auto;
+    margin: 80px auto 40px; /* separa del header y centra horizontalmente */
 }
 
 .card {
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 400px;
     transition: all 400ms ease-in-out;
     overflow: hidden;
@@ -56,7 +48,6 @@ body {
     width: 400px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
 }
 
@@ -71,14 +62,41 @@ body {
 }
 
 .card:hover{
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
+    cursor: pointer;
 }
 
-.titulo{
-    font-family: "ring";
-    font-size: 16px;
+/* Aura azul - Elfo Primordial */
+.card:nth-child(1):hover {
+    background-color: #a1a0a037;
+    box-shadow: 
+        0 0 15px #b6cfdc,
+        0 0 30px #73868f,
+        0 0 45px #444f54;
+}
+
+/* Aura verde - Elfo de Bosque */
+.card:nth-child(2):hover {
+    box-shadow: 
+        0 0 15px #98c7a6,
+        0 0 30px #6d8a76,
+        0 0 45px #3a463e;
+    background-color: #00441137;
+}
+
+/* Aura morada - Elfo del Vacío */
+.card:nth-child(3):hover {
+    box-shadow: 
+        0 0 15px #9062a7,
+        0 0 30px #7e5d8e,
+        0 0 45px #473550;   
+    background-color: #44008837;
+}
+
+header{
+    font-family: 'Ringbearer', serif;
+    font-size: 36px;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 50px;  
+    width: 100%;
+    margin-top: 20px;
 }
