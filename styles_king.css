@@ -6,20 +6,21 @@ body {
 
 h1 {
     align-items: center; 
+    color: e6d48f;
 }
-.div a{
-    padding: auto;
 
-
+img{
+    width: 90px;
 }
-a :hover {
 
-
-}
 
 header {
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    
+
+}
+
+section{
+    color: e6d48f;
 }
