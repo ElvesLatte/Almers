@@ -25,15 +25,24 @@ body {
 }
 
 header {
-    background-color: #182D09;
+    background-color: #2F3B1B;
     border: 60px solid;
     border-image: url(imagenes/frame_gold.png) 150 stretch;
     padding: 10px;
     text-align: center;
     font-family: "ring", serif;
     font-size: 40px;
-    color: #d9d9d9;
     border-radius: 15px;
+    position: relative;
+}
+
+header h1 {
+    background: linear-gradient(180deg, #FFFFF0 0%, #FFF8DC 20%, #F5DEB3 40%, #E8D5B7 60%, #D4C5A9 80%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;  
 }
 
 div.info {
