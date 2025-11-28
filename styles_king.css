@@ -64,6 +64,56 @@ img {
     transition: filter 0.3s ease;
 }
 
+/* ========== Artículos de Reinos ========== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+article {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+.kingdom-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.kingdom-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+    filter: brightness(1.1);
+}
+
+.kingdom-content {
+    flex: 1;
+}
+
+.kingdom-content h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.kingdom-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
 /* ========== Reino: Menzoberranzan ========== */
 #menzoberranzan {
     color: #e6d48f;
