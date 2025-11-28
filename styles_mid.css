@@ -24,6 +24,16 @@ body {
     margin: 20px;
 }
 
+body_index {
+    background-image: url(imagenes/fondo_index.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   
+    font-family: "ring", serif;
+    padding: auto;
+    margin: 20px;
+}
 header {
     background-color: #2F3B1B;
     border: 60px solid;
