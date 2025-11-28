@@ -1,15 +1,18 @@
+
 @font-face {
     font-family: 'Ringbearer';
     src: url('fonts/ringbearer.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Tngan';
     src: url('fonts/tngan.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 *{
     padding: 0;
     margin: 0;
@@ -26,41 +29,37 @@ body {
     color: #000;
     font-family: 'Ringbearer', serif;
 }
-
 .container {
     width: 80%;
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding:20px 0;
-    margin: 80px auto 40px; /* separa del header y centra horizontalmente */
+    padding: 20px 0;
+    margin: 80px auto 40px;
 }
-
 .card {
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 400px;
     transition: all 400ms ease-in-out;
     overflow: hidden;
     padding-bottom: 20px;
 }
-
 .card img {
     width: 400px;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
 }
-
 .card figure{
     height: 400px;
 }
-
 .card figure img{
     height: 100%;
     width: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
-
 .card:hover{
     transform: translateY(-3%);
     cursor: pointer;
@@ -68,35 +67,35 @@ body {
 
 /* Aura azul - Elfo Primordial */
 .card:nth-child(1):hover {
-    background-color: #a1a0a037;
     box-shadow: 
-        0 0 15px #b6cfdc,
-        0 0 30px #73868f,
-        0 0 45px #444f54;
+        0 0 15px #89d2f6,
+        0 0 30px #59889f,
+        0 0 45px #253942;
+    background-color: #6c8b9837;
 }
 
 /* Aura verde - Elfo de Bosque */
 .card:nth-child(2):hover {
     box-shadow: 
-        0 0 15px #98c7a6,
-        0 0 30px #6d8a76,
-        0 0 45px #3a463e;
+        0 0 15px #92f0b1,
+        0 0 30px #508c62,
+        0 0 45px #274630;
     background-color: #00441137;
 }
 
 /* Aura morada - Elfo del Vacío */
 .card:nth-child(3):hover {
     box-shadow: 
-        0 0 15px #9062a7,
-        0 0 30px #7e5d8e,
-        0 0 45px #473550;   
-    background-color: #44008837;
+        0 0 15px #cc83f0,
+        0 0 30px #86579d,
+        0 0 45px #402a4b;
+    background-color: #3b116537;
 }
 
-header{
+header {
     font-family: 'Ringbearer', serif;
     font-size: 36px;
     text-align: center;
     width: 100%;
-    margin-top: 20px;
-}
+    margin-top: 30px;
+} 
