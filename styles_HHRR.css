@@ -1,0 +1,265 @@
+/* ========= VARIABLES DE COLOR ========= */
+:root {
+  --forest-dark: #1c3b32;
+  --forest-light: #385b4f;
+  --gold: #bfa76a;
+  --magic-blue: #2f4469;
+  --void: #4b3b63;
+  --paper: #eee6d2;
+  --night: #0f0f14;
+  --text-dark: #2b2b2b;
+  --text-soft: #5d6f68;
+}
+
+/* ========= FUENTES LOCALES ========= */
+@font-face {
+  font-family: "Tengwar Annatar";
+  src: url("fonts/tngan.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Morris Roman";
+  src: url("fonts/MorrisRomanBlack.ttf") format("truetype");
+}
+
+/* ========= RESET GENERAL ========= */
+body {
+  margin: 0;
+  font-family: "Morris Roman", serif;
+  background-color: var(--paper);
+  color: var(--text-dark);
+}
+
+/* ===== SECCIÓN HISTORIA (FONDO PRINCIPAL) ===== */
+.section-history {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
+    url("fondo.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* ===== CAJA CENTRAL (PERGAMINO) ===== */
+.history-content {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(238, 230, 210, 0.92);
+  padding: 50px 40px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* ===== TITULOS ===== */
+.section-history header h2 {
+  font-family: "Tengwar Annatar", serif;
+  color: var(--forest-dark);
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--forest-light);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+
+/* SUBTÍTULOS */
+.section-history h3 {
+  color: var(--forest-dark);
+  border-bottom: 2px solid var(--gold);
+  margin-top: 25px;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.section-history h4 {
+  margin-bottom: 5px;
+  color: var(--forest-light);
+  font-size: 1.2rem;
+}
+
+/* ===== BLOQUES ===== */
+article {
+  margin-bottom: 80px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  backdrop-filter: blur(2px);
+}
+
+/* MARCADORES LATERALES */
+.race, .city {
+  padding-left: 12px;
+  border-left: 3px solid var(--gold);
+  margin: 10px 0;
+}
+
+/* ===== LISTAS ===== */
+.legends ul, .elf-text ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ===== DATOS RÁPIDOS ===== */
+.quickfacts {
+  background: rgba(191, 167, 106, 0.2);
+  padding: 15px 20px;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+.quickfacts h4 {
+  color: var(--gold);
+}
+
+/* ===== FOOTER ===== */
+.history-footer {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 25px;
+  text-align: right;
+}
+
+/* ===== LAYOUT TEXTO + IMAGEN ===== */
+.elf-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+/* TEXTO */
+.elf-text {
+  flex: 1;
+  text-align: justify;
+  line-height: 1.75;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+/* IMAGEN */
+.elf-image {
+  width: 300px;
+  min-width: 260px;
+  max-width: 40%;
+  text-align: center;
+}
+
+.elf-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.elf-image img:hover {
+  transform: scale(1.07);
+  filter: brightness(1.08);
+}
+
+/* ========= SECCIONES POR RAZA ========= */
+
+/* PRIMORDIALES */
+.primordials {
+  background: linear-gradient(to right, var(--magic-blue), var(--forest-dark));
+  color: var(--paper);
+}
+
+.primordials h3, .primordials p, .primordials li {
+  color: var(--paper);
+}
+
+/* BOSQUE */
+.forest-elves {
+  background: linear-gradient(to right, var(--forest-dark), var(--forest-light));
+  color: var(--paper);
+}
+
+.forest-elves h3, .forest-elves p, .forest-elves li {
+  color: var(--paper);
+}
+
+/* VACÍO */
+.void-elves {
+  background: linear-gradient(to right, var(--night), var(--void));
+  color: #d0d0d0;
+}
+
+.void-elves h3, .void-elves p, .void-elves li {
+  color: #d0d0d0;
+}
+
+/* POSICIONES DE IMÁGENES */
+.primordials-image {
+  margin-top: 250px;
+  margin-left: 30px;
+}
+
+.bosque-image {
+  margin-top: 160px;
+}
+
+.vacio-image {
+  margin-top: 140px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .elf-layout {
+    flex-direction: column;
+  }
+
+  .elf-image {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .primordials-image,
+  .bosque-image,
+  .vacio-image {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-history {
+    padding: 25px 15px;
+  }
+
+  .section-history header h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-history h3 {
+    font-size: 1.45rem;
+  }
+}
