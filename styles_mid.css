@@ -41,7 +41,15 @@ body.body_index {
    HEADER
    ============================================ */
 header {
-    background-color: #2F3B1B;
+    background: linear-gradient(135deg, 
+        #3E2723 0%, 
+        #4E342E 15%, 
+        #5D4037 30%, 
+        #6D4C41 45%, 
+        #5D4037 60%, 
+        #4E342E 75%, 
+        #3E2723 90%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
     border: 40px solid;
     border-image: url(imagenes/frame_gold.png) 150 stretch;
     padding: 8px;
