@@ -1,0 +1,455 @@
+@font-face {
+    font-family: "Tengwar Annatar";
+    src: url("./fonts/tngan.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ring";
+    src: url("./fonts/ringbearer.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ============================================
+   BODY VARIANTS
+   ============================================ */
+body.body_elves {
+    background-image: url(imagenes/fondo_elves.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   
+    font-family: "ring", serif;
+    padding: 0;
+    margin: 15px;
+}
+
+body.body_index {
+    background-image: url(imagenes/fondo_index.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   
+    font-family: "ring", serif;
+    padding: 0;
+    margin: 15px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background: linear-gradient(135deg, 
+        #3E2723 0%, 
+        #4E342E 15%, 
+        #5D4037 30%, 
+        #6D4C41 45%, 
+        #5D4037 60%, 
+        #4E342E 75%, 
+        #3E2723 90%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
+    border: 40px solid;
+    border-image: url(imagenes/frame_gold.png) 150 stretch;
+    padding: 8px;
+    text-align: center;
+    font-family: "ring", serif;
+    font-size: 28px;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+header.header_index {
+    /* Efecto madera */
+    background: linear-gradient(135deg, 
+        #3E2723 0%, 
+        #4E342E 15%, 
+        #5D4037 30%, 
+        #6D4C41 45%, 
+        #5D4037 60%, 
+        #4E342E 75%, 
+        #3E2723 90%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
+    border: 40px solid;
+    border-image: url(imagenes/frame_gold.png) 150 stretch;
+    padding: 15px;
+    text-align: center;
+    font-family: "ring", serif;
+    font-size: 26px;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    background: linear-gradient(180deg, #FFFFF0 0%, #FFF8DC 20%, #F5DEB3 40%, #E8D5B7 60%, #D4C5A9 80%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+    font-size: 1em;
+}
+
+header h3 {
+    background: linear-gradient(180deg, #FFFFF0 0%, #FFF8DC 20%, #F5DEB3 40%, #E8D5B7 60%, #D4C5A9 80%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    margin: 5px 0 0 0;
+    font-size: 0.7em;
+}
+
+header h6 {
+    /* Color crema/marfil para h6 en index */
+    background: linear-gradient(180deg, #FFF8DC 0%, #F5DEB3 30%, #E8D5B7 70%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin: 10px 20px;
+    font-size: 0.55em;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+/* ============================================
+   INFO & TEXT BOXES
+   ============================================ */
+div.info {
+    background-color: rgba(242, 233, 216, 0.9);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+div.text {
+    background-color: rgba(204, 222, 216, 0.9);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: #3E4E41;
+}
+
+/* ============================================
+   SECTION TITLE
+   ============================================ */
+.section-title {
+    background: linear-gradient(135deg, #213b0e, #b1c5a0);
+    border: 2px solid #C49B2A;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0 15px 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.section-title h2 {
+    color: #F2E9D8;
+    margin: 0;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1.5px;
+}
+
+.section-title p {
+    color: #d9d9d9;
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ============================================
+   ENTRY BOX
+   ============================================ */
+.entry-box {
+    background: linear-gradient(to bottom, rgba(242, 233, 216, 0.95) 0%, rgba(232, 220, 200, 0.95) 100%);
+    border: 2px solid #8B7355;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.entry-box::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #C49B2A;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.category-title {
+    color: #8B7355;
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 3px double #C49B2A;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   TRAIT ENTRY
+   ============================================ */
+.trait-entry {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid #A0826D;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.trait-entry:hover {
+    transform: translateX(4px);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.trait-entry h4 {
+    color: #5D4E37;
+    font-size: 17px;
+    margin: 0 0 6px 0;
+    font-weight: bold;
+}
+
+.trait-entry p {
+    color: #3E4E41;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.trait-entry ul {
+    margin: 8px 0 0 18px;
+    line-height: 1.6;
+}
+
+.trait-entry li {
+    color: #3E4E41;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* ============================================
+   TENGWAR MESSAGES
+   ============================================ */
+.elvish-secret {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 16px;
+    color: #C49B2A;
+    text-shadow: 0 0 6px rgba(196, 155, 42, 0.5);
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.elvish-secret:hover {
+    color: #FFD700;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.elvish-rune {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 24px;
+    color: #C49B2A;
+    text-align: center;
+    padding: 12px;
+    margin: 15px 0;
+    background: rgba(139, 115, 85, 0.1);
+    border-top: 1px solid #C49B2A;
+    border-bottom: 1px solid #C49B2A;
+    text-shadow: 0 0 8px rgba(196, 155, 42, 0.4);
+    letter-spacing: 2.5px;
+}
+
+.hidden-lore {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 19px;
+    color: #A0826D;
+    background: linear-gradient(to right, transparent, rgba(196, 155, 42, 0.15), transparent);
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.hidden-lore:hover {
+    opacity: 1;
+    color: #C49B2A;
+    text-shadow: 0 0 10px rgba(196, 155, 42, 0.6);
+}
+
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+.set-text-font {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3E4E41;
+    margin: 12px 0;
+    padding: 0 10px;
+}
+
+/* ============================================
+   PORTAL NAVIGATION
+   ============================================ */
+.portal-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 50px auto;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+.portal-wrapper {
+    text-align: center;
+    position: relative;
+}
+
+.portal-link {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.portal-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: all 0.4s ease;
+    filter: brightness(0.9) drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* EFECTOS HOVER INDIVIDUALES POR PORTAL */
+
+/* Portal 1 - DORADO (Elves) */
+.portal-wrapper:nth-child(1) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(1) .portal-link:hover {
+    animation: portal-pulse-gold 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-gold {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.9));
+    }
+}
+
+/* Portal 2 - VERDE */
+.portal-wrapper:nth-child(2) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(0, 255, 100, 0.8)) drop-shadow(0 0 40px rgba(0, 255, 100, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(2) .portal-link:hover {
+    animation: portal-pulse-green 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-green {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 100, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 255, 100, 0.9));
+    }
+}
+
+/* Portal 3 - AZUL OSCURO */
+.portal-wrapper:nth-child(3) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(10, 30, 120, 0.8)) drop-shadow(0 0 40px rgba(10, 30, 120, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(3) .portal-link:hover {
+    animation: portal-pulse-blue 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-blue {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(10, 30, 120, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(10, 30, 120, 0.9));
+    }
+}
+
+/* Portal 4 - AZUL CLARO/CYAN */
+.portal-wrapper:nth-child(4) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(0, 255, 255, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(4) .portal-link:hover {
+    animation: portal-pulse-cyan 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-cyan {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.9));
+    }
+}
+
+.portal-title {
+    background: linear-gradient(180deg, #D4AF37 0%, #C19A2E 30%, #9B7F1E 70%, #8B6914 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 25px;
+    margin: 15px 0 8px 0;
+    font-family: "ring", serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.portal-description {
+    color: #3E2723;  /* Café muy oscuro */
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 8px auto;
+    max-width: 280px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+    padding: 0 5px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .portal-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portal-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .portal-image {
+        max-width: 300px;
+    }
+}
