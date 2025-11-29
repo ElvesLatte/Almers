@@ -128,3 +128,53 @@ a {
     color: #cc83f0;
     text-shadow: 0 0 10px #cc83f0; 
 }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: linear-gradient(135deg, rgba(100, 65, 0, 0.3) 0%, rgba(28, 27, 26, 0.5) 50%, rgba(100, 65, 0, 0.3) 100%);
+    border-top: 2px solid #bfa76a;
+    padding: 25px 20px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer h3 {
+    color: #bfa76a;
+    font-family: 'Ringbearer', serif;
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+footer p {
+    color: #eee6d2;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+footer .author-item {
+    display: inline-block;
+    margin: 3px 10px;
+    padding: 0 6px;
+    border-right: 1px solid #bfa76a;
+}
+
+footer .author-item:last-child {
+    border-right: none;
+}
+
+footer .author-item a {
+    color: #bfa76a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .author-item a:hover {
+    color: #d4c5a9;
+    text-shadow: 0 0 8px rgba(191, 167, 106, 0.5);
+}
