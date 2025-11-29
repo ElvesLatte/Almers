@@ -1,0 +1,319 @@
+/* ========== Página Kingdoms ========== */
+body.kingdoms {
+    background-image: url(imagenes/fondito.png);
+    background-attachment: fixed;
+}
+
+/* ========== Tipografía ========== */
+h1 {
+    color: #e6d48f;
+}
+
+h2 {
+    color: #3FE2D2;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:hover {
+    color: #5FFFF0;
+    text-shadow: 0 0 15px rgba(63, 226, 210, 0.6);
+}
+
+p {
+    color: #F5F2E8;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-control {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+nav a:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 10px rgba(230, 212, 143, 0.8));
+}
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+nav img {
+    width: 90px;
+}
+
+/* ========== Artículos de Reinos ========== */
+main {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.kingdom-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.kingdom-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+    filter: brightness(1.1);
+}
+
+.kingdom-content h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.kingdom-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/*Menzoberranza */
+
+body.Menzoberranzan {
+    background-image: url(Menzoberranzan/02ec6bd51910267b8e6b7ee29638b268.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body.Menzoberranzan main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Menzoberranzan .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Menzoberranzan section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Menzoberranzan section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Menzoberranzan section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Menzoberranzan section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Menzoberranzan section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/*Alfheim */
+
+body.Alfheim {
+    background-image: url(Alfheim/Fonditoalf.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.Alfheim main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Alfheim .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Alfheim section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Alfheim section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Alfheim section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Alfheim section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Alfheim section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/*Valinor*/
+
+body.Valinor {
+    background-image: url(Valinor/fondo2vali.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.Valinor main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Valinor .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Valinor section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Valinor section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Valinor section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Valinor section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Valinor section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}

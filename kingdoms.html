@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdoms</title>
+    <link rel="stylesheet" href="styles_king.css">
+</head>
+<body class="kingdoms">
+    <!-- Header Section -->
+    <header>
+        <h1><i>KINGDOMS</i></h1>
+        <audio id="backgroundMusic" loop>
+            <source src="Audio/Elven Forest - Ethereal Fantasy Ambient Music - Relaxing Beautiful Meditative Music (mp3cut.net).mp3" type="audio/mpeg">
+        </audio>
+        <nav>           
+            <a href="#" id="musicControl">
+                <img src="imagenes/kingdoms.png_clear_same_size.png" alt="kingdoms">
+            </a>
+            <a href="Menzoberranzan.html">
+                <img src="imagenes/logo_396x387.png" alt="Menzoberranzan">
+            </a>
+            <a href="Alfheim.html">
+                <img src="imagenes/Alfheim_cle.png" alt="Alfheim">
+            </a>
+            <a href="Valinor .html">
+                <img src="imagenes/Valinor_clear (1)_same.png" alt="Valinor">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Menzoberranzan Section -->
+        <article id="menzoberranzan">
+            <div class="image-column">
+                <img src="Menzoberranzan/Imagen de WhatsApp 2025-11-28 a las 13.17.35_c708874f.jpg" alt="Menzoberranzan" class="kingdom-img">
+                <img src="Menzoberranzan/74ad50fce2c313dcecf2576602d7c622.jpg" alt="ciudad" class="kingdom-img">
+            </div>
+            <div class="text-column">
+                <div class="kingdom-content">
+                    <a href="Menzoberranzan.html"><h2>Menzoberranzan</h2></a>
+                    <p>
+                        Bajo montañas huecas y cavernas que respiran oscuridad, yace Menzoberranzan:
+                        la capital del linaje caído, la cuna de los Elfos del Vacío.
+
+                        No es solo una ciudad: es una herida en el mundo.
+                        Sus torres retorcidas brillan con luz pálida, moldeadas por magia que no crea, sino devora.
+                        Las sombras se mueven incluso cuando nadie camina; la arquitectura responde a pensamientos, no a manos.
+
+                        Aquí, la supervivencia es ley.
+                        Los habitantes descienden del antiguo exilio primordial, de aquellos que la luz olvidó y que escucharon el susurro del Vacío.
+                        Sus ojos blancos vigilan cada rincón, capaces de ver lo que la oscuridad intenta ocultar.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Alfheim Section -->
+        <article id="alfheim">
+            <div class="text-column">
+                <div class="kingdom-content">
+                    <a href="Alfheim.html"><h2>Alfheim</h2></a>
+                    <p>
+                        Alfheim es el corazón del mundo vivo:
+                        bosques que respiran, ríos que cantan y ciudades construidas con ramas que jamás mueren.
+                        Aquí habitan los Elfos del Bosque, descendientes directos de los que entregaron su sangre
+                        divina a la Madre Naturaleza para obtener la verdadera eternidad.
+                    </p>
+                </div>
+            </div>
+            <div class="image-column">
+                <img src="Alfheim/Imagen de WhatsApp 2025-11-28 a las 13.17.35_023b0457.jpg" alt="Alfheim" class="kingdom-img">
+                <img src="Alfheim/nueve-mundos-alfheim.webp" alt="ciudad" class="kingdom-img">
+            </div>
+        </article>
+        <!-- Valinor Section -->
+        <article id="valinor">
+            <div class="image-column">
+                <img src="Valinor/Imagen de WhatsApp 2025-11-28 a las 13.17.36_63b58f24.jpg" alt="Valinor" class="kingdom-img">
+                <img src="Valinor/3d6638cd5e4cd999ea95ed1a5e52165c.jpg" alt="ciudad" class="kingdom-img">
+            </div>
+            <div class="text-column">
+                <div class="kingdom-content">
+                    <a href="Valinor .html"><h2>Valinor</h2></a>
+                    <p>
+                        Valinor es el eco más puro de lo que los Elfos Primordiales fueron antes de su caída:
+                        una tierra donde la luz no quema, sino que acaricia;
+                        donde el tiempo no destruye, solo embellece.
+                        Es hogar de los descendientes más cercanos al linaje primordial, aquellos cuya sangre aún vibra con resonancia divina.
+                        Aquí, la memoria no pesa: fluye.
+                        La belleza no se ostenta: existe.
+                        La magia no se conjura: se recuerda, como si el mundo obedeciera a un antiguo instinto.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+        <footer>Nombre de esta gente, ni modo</footer>
+    
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        
+        musicControl.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que navegue
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
+</body>
+</html>
+

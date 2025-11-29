@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menzoberranzan</title>
+    <link rel="stylesheet" href="styles_king.css">
+</head>
+<body class="Menzoberranzan">
+    <header>
+        <h1><i>Menzoberranzan</i></h1>
+        <audio id="backgroundMusic" loop>
+            <source src="Audio/A Journey Through The Underdark _ Immersive Music and Ambience _ Original Baldur's Gate Music [LGKzm-anLkQ] (mp3cut.net) (1).mp3" type="audio/mpeg">
+        </audio>
+        <div>
+        <nav>           
+            <a href="kingdoms.html">
+                <img src="imagenes/kingdoms.png_clear_same_size.png" alt="kingdoms">
+            </a>
+            
+            <a href="#" id="musicControl">
+                <img src="imagenes/logo_396x387.png" alt="Menzoberranzan">
+            </a>
+            
+            <a href="Alfheim.html">
+                <img src="imagenes/Alfheim_cle.png" alt="Alfheim">
+            </a>
+            
+            <a href="Valinor .html">
+                <img src="imagenes/Valinor_clear (1)_same.png" alt="Valinor">
+            </a>
+        </nav>
+        </div>
+    </header>
+    
+    <main>
+        <p class="intro">Reino debajo de la tierra</p>
+
+        <section>
+            <h2>Población</h2>
+            <div class="image-grid">
+                <img src="Menzoberranzan/menzoberr.png" alt="Habitantes">
+                <img src="Menzoberranzan/Habitantess.png" alt="Poblacion">
+            </div>
+            <p>Camilo</p>
+            <p>sdgfuisbgsvuigbvi</p>
+        </section>
+
+        <section>
+            <h2>Mapa</h2>
+            <div class="image-grid">
+                <img src="Menzoberranzan/Mapa.png" alt="Mapa">
+                <img src="Menzoberranzan/MapaEntrada.png" alt="Mapa">
+            </div>
+            <p>
+                Among its winding alleyways, bioluminescent lights pulse, revealing temples, towers,
+                and dwellings carved from the very living stone of the abyss.
+            </p>
+            <p>
+                Access to Menzoberranzan begins high atop a treacherous mountain range, where
+                a narrow path winds between jagged crags and mist-shrouded chasms. Only the most
+                determined travelers manage to cross its frozen passages, for each curve hides the danger of a fatal slip. 
+                At the end of the trail, a dark fissure opens in the mountainside like the mouth of a sleeping giant. There,
+                far from the light of the sun, lies the secret entrance to the Underdark: the 
+                threshold leading to the city of the drow.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ciudad</h2>
+            <div class="image-grid">
+                <img src="Menzoberranzan/Ciudad.png" alt="Ciudad">
+                <img src="Menzoberranzan/Castillosubter.png" alt="reino">
+            </div>
+            <p>
+                The city unfolds like a forest of razor-edged towers carved from the very rock that surrounds it, 
+                while a luminous river winds its way through its eternal shadows.
+            </p>
+            <p>
+                In the deepest reaches of the subterranean realm rises the castle, a fortress of dark stone whose towers
+                seem to pierce the eternal gloom of the abyss.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        
+        musicControl.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
+</body>
+</html>
