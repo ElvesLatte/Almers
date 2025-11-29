@@ -153,3 +153,54 @@ body.Menzoberranzan section img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
 }
+
+/*Alfheim */
+
+body.Alfheim {
+    background-image: url(Alfheim/Fonditoalf.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.Alfheim main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Alfheim .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Alfheim section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+body.Alfheim section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 15px auto;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Alfheim section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
