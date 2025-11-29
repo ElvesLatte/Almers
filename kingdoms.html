@@ -10,8 +10,11 @@
     <!-- Header Section -->
     <header>
         <h1><i>KINGDOMS</i></h1>
+        <audio id="backgroundMusic" loop>
+            <source src="Audio/Elven Forest - Ethereal Fantasy Ambient Music - Relaxing Beautiful Meditative Music (mp3cut.net).mp3" type="audio/mpeg">
+        </audio>
         <nav>           
-            <a href="kingdoms.html">
+            <a href="#" id="musicControl">
                 <img src="imagenes/kingdoms.png_clear_same_size.png" alt="kingdoms">
             </a>
             <a href="Menzoberranzan.html">
@@ -93,6 +96,20 @@
         </article>
     </main>
         <footer>Nombre de esta gente, ni modo</footer>
+    
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        
+        musicControl.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que navegue
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
 </body>
 </html>
 

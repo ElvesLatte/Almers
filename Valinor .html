@@ -6,10 +6,12 @@
     <title>Alfheim</title>
     <link rel="stylesheet" href="styles_king.css">
 </head>
-<body>
-    <section Alfheim>
+<body class="Valinor">
     <header>
         <h1><i>Valinor</i></h1>
+        <audio id="backgroundMusic" loop>
+            <source src="Audio/Elven Forest - Ethereal Fantasy Ambient Music - Relaxing Beautiful Meditative Music (mp3cut.net).mp3" type="audio/mpeg">
+        </audio>
         <div>
         <nav>           
             <a href="kingdoms.html">
@@ -24,13 +26,57 @@
                 <img src="imagenes/Alfheim_cle.png" alt="Alfheim">
             </a>
             
-            <a href="Valinor .html">
+            <a href="#" id="musicControl">
                 <img src="imagenes/Valinor_clear (1)_same.png" alt="Valinor">
             </a>
         </nav>
         </div>
     </header>
-    </section Alfheim>
-    <p> Alfheim, reino de los elfos de la luz en la mitología nórdica</p>
+
+    <main>
+        <p class="intro">Valinor, tierra de los inmortales y hogar de los elfos más puros</p>
+        <section>
+            <h2>Población</h2>
+            <div class="image-grid">
+                <img src="Valinor/habitantesvali.png" alt="Habitantes">
+                <img src="Valinor/poblacionvali.png" alt="Poblacion">
+            </div>
+            <p>En Valinor, la luz no solo ilumina: susurra. La población del reino bendito se mueve entre velos dorados que esconden antiguas verdades, y sus miradas, serenas pero insondables, parecen atravesar el alma de quien las contempla. Cada gesto, cada palabra, lleva el eco de épocas que ningún mortal recuerda. En estas tierras donde la luz nunca muere, los habitantes de Valinor guardan secretos tan antiguos como la creación misma… y solo revelan lo que el destino permite ver.</p>
+            <p>Entre los resplandores eternos de Valinor, sus habitantes avanzan como figuras hechas de luz antigua, envueltos en silencios que parecen contener ecos de un tiempo inaccesible. Sus miradas, suaves pero insondables, revelan una sabiduría que ningún mortal podría comprender por completo.</p>
+        </section>
+
+        <section>
+            <h2>Mapa</h2>
+            <div class="image-grid">
+                <img src="Valinor/maparei.png" alt="Mapa">
+                <img src="Valinor/mapaciu.png" alt="Mapa">
+            </div>
+            <p>Explorar la ciudad de Valinor es adentrarse en un laberinto de luz viva, donde los caminos parecen trazados por manos invisibles y los ríos centellean con reflejos que no pertenecen al mundo mortal. Las torres doradas de la High City se alzan como faros divinos, ocultando secretos ancestrales tras su resplandor perfecto</p>
+            <p>El reino de Valinor se extiende como un tapiz dorado tejido por manos divinas, pero bajo su resplandor perfecto laten secretos que pocos comprenden. Las planicies brillan con una luz que no proviene del sol, y el Celestial Sea murmura melodías antiguas que parecen llamar a quienes se acercan demasiado. Araman, vasto y silencioso, oculta caminos que solo se revelan a los dignos, mientras en Laurelin la tierra vibra con ecos de la luz primordial.</p>
+        </section>
+
+        <section>
+            <h2>Ciudad</h2>
+            <div class="image-grid">
+                <img src="Valinor/ciudadvali.png" alt="Ciudad">
+                <img src="Valinor/Castillovali.png" alt="Reino">
+            </div>
+            <p></p>
+        </section>
+    </main>
+
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        
+        musicControl.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
 </body>
 </html>

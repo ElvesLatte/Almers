@@ -34,6 +34,17 @@ header {
     justify-content: space-between;
 }
 
+.music-control {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+}
+
 nav {
     display: flex;
     gap: 20px;
@@ -127,31 +138,60 @@ article:hover {
 body.Menzoberranzan {
     background-image: url(Menzoberranzan/02ec6bd51910267b8e6b7ee29638b268.jpg);
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body.Menzoberranzan main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Menzoberranzan .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
 }
 
 body.Menzoberranzan section {
     max-width: 1200px;
     margin: 30px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
+}
+
+body.Menzoberranzan section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 body.Menzoberranzan section img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    margin: 15px auto;
-    display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 body.Menzoberranzan section img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Menzoberranzan section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 /*Alfheim */
@@ -175,7 +215,7 @@ body.Alfheim .intro {
     font-size: 1.3em;
     margin: 30px auto;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     max-width: 800px;
 }
@@ -183,24 +223,97 @@ body.Alfheim .intro {
 body.Alfheim section {
     max-width: 1200px;
     margin: 30px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
+}
+
+body.Alfheim section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 body.Alfheim section img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    margin: 15px auto;
-    display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 body.Alfheim section img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Alfheim section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/*Valinor*/
+
+body.Valinor {
+    background-image: url(Valinor/fondo2vali.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.Valinor main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Valinor .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Valinor section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Valinor section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Valinor section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Valinor section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Valinor section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
