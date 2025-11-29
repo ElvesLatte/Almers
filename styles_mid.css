@@ -407,23 +407,23 @@ div.text {
 }
 
 .portal-title {
-    background: linear-gradient(180deg, #FFFFF0 0%, #FFF8DC 30%, #F5DEB3 70%, #E8D5B7 100%);
+    background: linear-gradient(180deg, #D4AF37 0%, #C19A2E 30%, #9B7F1E 70%, #8B6914 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 22px;
+    font-size: 25px;
     margin: 15px 0 8px 0;
     font-family: "ring", serif;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .portal-description {
-    color: #E8D5B7;
-    font-size: 13px;
+    color: #3E2723;  /* Café muy oscuro */
+    font-size: 20px;
     line-height: 1.5;
     margin: 8px auto;
     max-width: 280px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
     padding: 0 5px;
 }
 
