@@ -15,10 +15,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Morris Roman";
-    src: url("fonts/MorrisRomanBlack.ttf") format("truetype");
-}
 
 /* ============================================
    VARIABLES DE COLOR
@@ -1174,84 +1170,95 @@ body.races {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER (reorganizado)
    ============================================ */
 footer {
-    background: linear-gradient(135deg, rgba(47, 59, 27, 0.95) 0%, rgba(60, 74, 34, 0.95) 50%, rgba(47, 59, 27, 0.95) 100%);
-    border-top: 3px solid #C49B2A;
-    padding: 30px 20px;
+    /* gradiente: arena pálido -> mostaza */
+    background: linear-gradient(180deg, #F6E9C8 0%, #F2E3B3 40%, #E2C67D 70%, #C49B2A 100%);
+    border-top: 3px solid rgba(196,155,42,0.9);
+    padding: 28px 20px;
     margin-top: 60px;
-    text-align: center;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -6px 18px rgba(0,0,0,0.12);
+    color: var(--text-dark);
 }
 
-/* Footer para kingdoms */
+/* Footer layout: centrado y responsivo */
+footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+footer h3 {
+    color: #5a4724;
+    font-family: "ring", serif;
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+footer p {
+    color: #4a3f2b;
+    font-family: "ring", serif;
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Autores: organizado en fila, con separación y buen contraste */
+footer .authors {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .author-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    color: #5a4724;
+    font-size: 14px;
+}
+
+footer .author-item a {
+    color: #5a4724;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer .author-item a:hover {
+    color: #2f250f;
+}
+
+/* Variantes por contexto (si se quiere destacar en kingdoms/races) */
 body.kingdoms footer,
 body.Menzoberranzan footer,
 body.Alfheim footer,
 body.Valinor footer {
-    background: linear-gradient(135deg, rgba(63, 226, 210, 0.1) 0%, rgba(47, 68, 105, 0.15) 50%, rgba(63, 226, 210, 0.1) 100%);
-    border-top: 2px solid var(--cyan);
+    background: linear-gradient(180deg, #E8F7F5 0%, #D4F0EC 100%);
+    border-top-color: var(--cyan);
 }
 
-body.kingdoms footer h3,
-body.Menzoberranzan footer h3,
-body.Alfheim footer h3,
-body.Valinor footer h3 {
-    color: var(--cyan);
-}
-
-body.kingdoms footer .author-item,
-body.Menzoberranzan footer .author-item,
-body.Alfheim footer .author-item,
-body.Valinor footer .author-item {
-    border-right: 1px solid var(--cyan);
-}
-
-/* Footer para races */
 body.races footer {
-    background: linear-gradient(135deg, rgba(100, 65, 0, 0.3) 0%, rgba(28, 27, 26, 0.5) 50%, rgba(100, 65, 0, 0.3) 100%);
-    border-top: 2px solid #bfa76a;
-}
-
-footer h3 {
-    color: #F2E9D8;
-    font-family: "ring", serif;
-    font-size: 18px;
-    margin: 0 0 15px 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-
-footer p {
-    color: #E8D5B7;
-    font-family: "ring", serif;
-    font-size: 14px;
-    margin: 8px 0;
-    line-height: 1.8;
-}
-
-footer .author-item {
-    display: inline-block;
-    margin: 5px 15px;
-    padding: 0 10px;
-    border-right: 1px solid #C49B2A;
-}
-
-footer .author-item:last-child {
-    border-right: none;
-}
-
-footer .author-item a {
-    color: #FFD700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-footer .author-item a:hover {
-    color: #F5DEB3;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    /* un tono ligeramente más cálido para races */
+    background: linear-gradient(180deg, #FBF3E6 0%, #F6E9C8 100%);
+    border-top-color: #C49B2A;
 }
 
 /* ============================================
