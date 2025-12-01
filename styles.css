@@ -113,20 +113,6 @@ body.races {
     overflow: hidden;
     background-position: center center;
     color: #1c1b1a;
-/* History page */
-.section-history {
-    width: 100%;
-    min-height: auto;
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background:
-        radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
-        url("fondo/fondo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* ============================================

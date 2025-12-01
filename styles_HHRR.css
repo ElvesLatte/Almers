@@ -40,7 +40,7 @@ body {
   align-items: flex-start;
   background:
     radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
-    url("fondo.png");
+    url("fondo/fondo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -223,40 +223,4 @@ ul li {
 @keyframes breathing {
   from { transform: scale(1); }
   to { transform: scale(1.04); }
-}
-
-/* ===== HOME/LOGO BUTTON ===== */
-.home-button {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-  background: rgba(191, 167, 106, 0.1);
-  border: 2px solid rgba(191, 167, 106, 0.3);
-  flex-shrink: 0;
-  margin: 20px 0;
-}
-
-.home-button:hover {
-  background: rgba(191, 167, 106, 0.25);
-  border-color: #bfa76a;
-  box-shadow: 0 0 12px rgba(191, 167, 106, 0.5);
-  transform: scale(1.1);
-}
-
-.home-button img {
-  width: 35px;
-  height: 35px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.home-button:hover img {
-  opacity: 1;
-  filter: brightness(1.3);
 }
