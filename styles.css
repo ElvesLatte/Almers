@@ -3,14 +3,14 @@
    ============================================ */
 @font-face {
     font-family: "Tengwar Annatar";
-    src: url("./fonts/tngan.ttf") format("truetype");
+    src: url("fonts/tngan.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "ring";
-    src: url("./fonts/ringbearer.ttf") format("truetype");
+    src: url("fonts/ringbearer.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -123,11 +123,9 @@ body.races {
     align-items: flex-start;
     background:
         radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
-        url("fondo.png");
+        url("fondo/fondo.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-}   background-position: center;
     background-repeat: no-repeat;
 }
 
