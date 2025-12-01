@@ -1,4 +1,4 @@
-/* ========= VARIABLES DE COLOR ========= */
+/* VARIABLES DE COLOR */
 :root {
   --forest-dark: #1c3b32;
   --forest-light: #385b4f;
@@ -11,7 +11,7 @@
   --text-soft: #5d6f68;
 }
 
-/* ========= FUENTES LOCALES ========= */
+/* FUENTES LOCALES */
 @font-face {
   font-family: "Tengwar Annatar";
   src: url("fonts/tngan.ttf") format("truetype");
@@ -22,7 +22,7 @@
   src: url("fonts/MorrisRomanBlack.ttf") format("truetype");
 }
 
-/* ========= RESET GENERAL ========= */
+/* RESET GENERAL*/
 body {
   margin: 0;
   font-family: "Morris Roman", serif;
@@ -30,127 +30,94 @@ body {
   color: var(--text-dark);
 }
 
-/* ===== SECCIÓN HISTORIA (FONDO PRINCIPAL) ===== */
+/* SECCIÓN HISTORIA */
 .section-history {
   width: 100%;
-  min-height: 100vh;
-  padding: 80px 20px;
-
+  min-height: auto;
+  padding: 60px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-
+  align-items: flex-start;
   background:
     radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
     url("fondo.png");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-
-/* ===== CAJA CENTRAL (PERGAMINO) ===== */
+/* CAJA CENTRAL */
 .history-content {
-  max-width: 1200px;
+  max-width: 1500px;
   width: 100%;
   background: rgba(238, 230, 210, 0.92);
-  padding: 50px 40px;
+  padding: 40px 35px;
   border-radius: 22px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
 }
 
-
-
-/* ===== TITULOS ===== */
+/* TITULOS */
 .section-history header h2 {
   font-family: "Tengwar Annatar", serif;
   color: var(--forest-dark);
   font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .subtitle {
   color: var(--forest-light);
   font-size: 1rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   letter-spacing: 0.05em;
 }
 
-/* SUBTÍTULOS */
 .section-history h3 {
   color: var(--forest-dark);
   border-bottom: 2px solid var(--gold);
-  margin-top: 25px;
-  padding-bottom: 6px;
-  margin-bottom: 15px;
-  font-size: 1.9rem;
+  margin-top: 15px;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 
 .section-history h4 {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: var(--forest-light);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
-/* ===== BLOQUES ===== */
+/* BLOQUES*/
 article {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   padding: 20px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 8px 22px rgba(0,0,0,0.12);
   backdrop-filter: blur(2px);
+  height: auto;
+  overflow: hidden;
 }
 
-/* MARCADORES LATERALES */
-.race, .city {
-  padding-left: 12px;
-  border-left: 3px solid var(--gold);
-  margin: 10px 0;
-}
-
-/* ===== LISTAS ===== */
+/* LISTAS */
 .legends ul, .elf-text ul {
-  padding-left: 20px;
-  margin-top: 10px;
+  padding-left: 18px;
+  margin-top: 8px;
 }
 
 ul li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-/* ===== DATOS RÁPIDOS ===== */
-.quickfacts {
-  background: rgba(191, 167, 106, 0.2);
-  padding: 15px 20px;
-  border-radius: 14px;
-  margin-top: 25px;
-}
-
-.quickfacts h4 {
-  color: var(--gold);
-}
-
-/* ===== FOOTER ===== */
-.history-footer {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 25px;
-  text-align: right;
-}
-
-/* ===== LAYOUT TEXTO + IMAGEN ===== */
+/* LAYOUT TEXTO + IMAGEN */
 .elf-layout {
   display: flex;
-  gap: 30px;
+  gap: 22px;
   align-items: flex-start;
-  margin-bottom: 50px;
   flex-wrap: wrap;
 }
 
@@ -158,101 +125,81 @@ ul li {
 .elf-text {
   flex: 1;
   text-align: justify;
-  line-height: 1.75;
-  font-size: 1rem;
+  line-height: 1.65;
+  font-size: 0.95rem;
   color: var(--text-dark);
 }
 
-/* IMAGEN */
 .elf-image {
   width: 300px;
-  min-width: 260px;
-  max-width: 40%;
+  min-width: 240px;
+  max-width: 38%;
+  height: auto;
   text-align: center;
+  margin-top: 70px;   
 }
 
 .elf-image img {
   width: 100%;
   height: auto;
+  display: block;
   border-radius: 14px;
   box-shadow: 0 10px 22px rgba(0,0,0,0.25);
   object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .elf-image img:hover {
-  transform: scale(1.07);
-  filter: brightness(1.08);
+  transform: scale(1.05);
 }
 
-/* ========= SECCIONES POR RAZA ========= */
+/* SECCIONES POR RAZA*/
 
-/* PRIMORDIALES */
 .primordials {
-  background: linear-gradient(to right, var(--magic-blue), var(--forest-dark));
+  background: radial-gradient(circle at top, #5b7cff, #1c3b65);
   color: var(--paper);
+  box-shadow: inset 0 0 80px rgba(255,215,150,0.3);
 }
 
 .primordials h3, .primordials p, .primordials li {
   color: var(--paper);
 }
 
-/* BOSQUE */
 .forest-elves {
-  background: linear-gradient(to right, var(--forest-dark), var(--forest-light));
+  background: radial-gradient(circle at top, #4fa36a, #1f4d3b);
   color: var(--paper);
+  box-shadow: inset 0 0 80px rgba(150,255,180,0.3);
 }
 
 .forest-elves h3, .forest-elves p, .forest-elves li {
   color: var(--paper);
 }
 
-/* VACÍO */
 .void-elves {
-  background: linear-gradient(to right, var(--night), var(--void));
+  background: radial-gradient(circle at top, #3c2a55, #0a0215);
   color: #d0d0d0;
+  box-shadow: inset 0 0 80px rgba(160,120,255,0.25);
 }
 
 .void-elves h3, .void-elves p, .void-elves li {
   color: #d0d0d0;
 }
 
-/* POSICIONES DE IMÁGENES */
-.primordials-image {
-  margin-top: 250px;
-  margin-left: 30px;
-}
-
-.bosque-image {
-  margin-top: 160px;
-}
-
-.vacio-image {
-  margin-top: 140px;
-}
-
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .elf-layout {
     flex-direction: column;
   }
 
   .elf-image {
-    width: 75%;
-    margin: 0 auto;
-  }
-
-  .primordials-image,
-  .bosque-image,
-  .vacio-image {
-    margin-top: 30px;
-    margin-left: 0;
+    width: 80%;
+    margin: 20px auto 0; 
   }
 }
 
 @media (max-width: 600px) {
   .section-history {
-    padding: 25px 15px;
+    padding: 30px 15px;
   }
 
   .section-history header h2 {
@@ -260,6 +207,20 @@ ul li {
   }
 
   .section-history h3 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
+
+  article {
+    padding: 15px;
+  }
+}
+
+/* EFECTO TÍTULO VIVO */
+.breathing {
+  animation: breathing 4s ease-in-out infinite alternate;
+}
+
+@keyframes breathing {
+  from { transform: scale(1); }
+  to { transform: scale(1.04); }
 }
