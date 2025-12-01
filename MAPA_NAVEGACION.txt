@@ -1,0 +1,101 @@
+================================================================================
+                      🗺️ MAPA DE NAVEGACIÓN - ALMERS
+================================================================================
+
+✅ NAVEGACIÓN CORRECTAMENTE CONFIGURADA:
+
+1. INDEX.HTML (Página Principal)
+   ├─ Portal 1: "The Luminary Codex..." → history.html ✅
+   ├─ Portal 2: "Songs of the Endless..." → races_and_class.html ✅
+   ├─ Portal 3: "Codex et Grimoria..." → elves_habilities.html ✅
+   └─ Portal 4: "Chronicles, Exploration..." → kingdoms.html ✅
+
+2. HISTORY.HTML (Historia de Elfos)
+   ├─ Botón "Back to Main" → index.html ✅
+   └─ (Página terminal/lectura)
+
+3. RACES_AND_CLASS.HTML (Razas de Elfos)
+   ├─ Botón "Home" en header → index.html ✅
+   ├─ Primordial Elves → elves_habilities.html ✅
+   ├─ Forest Elves → elves_habilities.html ✅
+   └─ Void Elves → elves_habilities.html ✅
+
+4. ELVES_HABILITIES.HTML (Habilidades)
+   ├─ Botón "Home" en header → index.html ✅
+   └─ (Página terminal/información)
+
+5. KINGDOMS.HTML (Hub de Reinos)
+   ├─ Navegación Superior:
+   │  ├─ Kingdoms (auto) ✅
+   │  ├─ Menzoberranzan → Menzoberranzan.html ✅
+   │  ├─ Alfheim → Alfheim.html ✅
+   │  └─ Valinor → Valinor .html ⚠️ (CON ESPACIO)
+   │
+   ├─ Artículos (Enlaces sobre descripciones):
+   │  ├─ Menzoberranzan → Menzoberranzan.html ✅
+   │  ├─ Alfheim → Alfheim.html ✅
+   │  └─ Valinor → Valinor .html ⚠️ (CON ESPACIO)
+
+6. MENZOBERRANZAN.HTML (Ciudad Subterránea)
+   ├─ Navegación Superior:
+   │  ├─ Kingdoms → kingdoms.html ✅
+   │  ├─ Menzoberranzan (auto) ✅
+   │  ├─ Alfheim → Alfheim.html ✅
+   │  └─ Valinor → Valinor .html ⚠️ (CON ESPACIO)
+   │
+   └─ Control de Música: # (manejado con JavaScript)
+
+7. ALFHEIM.HTML (Reino de Luz)
+   ├─ Navegación Superior:
+   │  ├─ Kingdoms → kingdoms.html ✅
+   │  ├─ Menzoberranzan → Menzoberranzan.html ✅
+   │  ├─ Alfheim (auto) ✅
+   │  └─ Valinor → Valinor .html ⚠️ (CON ESPACIO)
+
+8. VALINOR .HTML (Reino de Luz Eterna) ⚠️ PROBLEMA CON NOMBRE
+   ├─ Navegación Superior:
+   │  ├─ Kingdoms → kingdoms.html ✅
+   │  ├─ Menzoberranzan → Menzoberranzan.html ✅
+   │  ├─ Alfheim → Alfheim.html ✅
+   │  └─ Valinor (auto) ✅
+   │
+   └─ Control de Música: # (manejado con JavaScript)
+
+================================================================================
+⚠️  PROBLEMAS IDENTIFICADOS Y SOLUCIONES:
+================================================================================
+
+1. ARCHIVO CON NOMBRE PROBLEMÁTICO:
+   • Archivo: "Valinor .html" (tiene ESPACIO antes de .html)
+   • Riesgo: Puede causar errores en algunos navegadores/sistemas
+   • Solución: Renombrar a "Valinor.html" (sin espacio)
+   • Archivos a actualizar después del renombre:
+     - index.html (no tiene referencia - agregar si es necesario)
+     - kingdoms.html (3 referencias)
+     - Menzoberranzan.html (1 referencia)
+     - Alfheim.html (1 referencia)
+
+2. NAVEGACIÓN AGREGADA (NUEVO):
+   • history.html: Botón "Back to Main" → index.html
+   • elves_habilities.html: Botón "Home" en header
+   • races_and_class.html: Botón "Home" en header
+
+================================================================================
+✅ TODAS LAS PÁGINAS CORRECTAMENTE VINCULADAS EXCEPTO:
+================================================================================
+
+- Valinor .html (nombre con espacio)
+- index.html no tiene portal directo a kingdoms.html desde el menú de navegación
+  (pero tiene Portal 4 que lo enlaza)
+
+================================================================================
+📌 RECOMENDACIÓN FINAL:
+================================================================================
+
+1. Renombrar "Valinor .html" → "Valinor.html" manualmente en el explorador
+2. Una vez renombrado, actualizar todos los href que contienen "Valinor .html"
+   reemplazando por "Valinor.html"
+
+Los scripts están disponibles y los enlaces están organizados profesionalmente.
+
+================================================================================
