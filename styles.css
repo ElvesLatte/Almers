@@ -16,6 +16,13 @@
 }
 
 @font-face {
+    font-family: 'Ringbearer';
+    src: url('fonts/ringbearer.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Tngan';
     src: url('fonts/tngan.ttf') format('truetype');
     font-weight: normal;
@@ -114,10 +121,12 @@ body.Valinor {
 
 /* Races page */
 body.races {
-    background-image: url('fondo/fondo2.jpg');
+    background-image: url('fondo/fondo5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    overflow: hidden;
+    color: #1c1b1a;
 }
 
 /* History page */
@@ -137,7 +146,7 @@ body.races {
 }
 
 /* ============================================
-   HEADER - Módulo de Kingdoms (funcionando)
+   HEADER - Módulo General
    ============================================ */
 header {
     display: flex;
@@ -185,6 +194,25 @@ header:not(.header_index):not(.section-history header) {
     margin-bottom: 15px;
 }
 
+/* Header para races */
+body.races header {
+    font-family: "ring", serif;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    background: #64410055;
+    color: #000000;
+    text-shadow:
+        0 0 15px hwb(51 35% 2%),
+        0 0 30px #9b8f23,
+        0 0 45px #6a6714;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 /* ============================================
    HOME/LOGO BUTTON - Universal
    ============================================ */
@@ -216,13 +244,13 @@ body.body_elves .home-button:hover {
     box-shadow: 0 0 12px rgba(242, 233, 216, 0.5);
 }
 
-/* Para races/header específico */
-header[style*="background: #64410055"] .home-button {
+/* Para races */
+body.races .home-button {
     background: rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.3);
 }
 
-header[style*="background: #64410055"] .home-button:hover {
+body.races .home-button:hover {
     background: rgba(0, 0, 0, 0.25);
     border-color: #000000;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
@@ -270,6 +298,33 @@ body.Valinor .home-button:hover {
 .home-button:hover img {
     opacity: 1;
     filter: brightness(1.3);
+    transform: scale(1.1);
+}
+
+/* Logo alternativo en esquina (races) */
+.logo-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(232, 230, 230, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 
+        0 0 15px #fff980,
+        0 0 30px #a8a354,
+        0 0 45px #716e38,
+        0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ============================================
@@ -285,6 +340,14 @@ h1 {
     font-size: 1em;
 }
 
+body.races h1 {
+    background: none;
+    color: #000000;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.37);
+    margin: 0;
+}
+
 h2 {
     color: var(--cyan);
     text-decoration: none;
@@ -294,6 +357,11 @@ h2 {
 h2:hover {
     color: #5FFFF0;
     text-shadow: 0 0 15px rgba(63, 226, 210, 0.6);
+}
+
+body.races h2 {
+    color: lch(0% 0 0);
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.37);
 }
 
 h3 {
@@ -325,6 +393,10 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+body.races a {
+    color: rgb(0, 0, 0);
 }
 
 /* ============================================
@@ -755,6 +827,7 @@ article:hover {
     text-align: justify;
 }
 
+/* Menzoberranzan específico */
 body.Menzoberranzan main {
     max-width: 1200px;
     margin: 0 auto;
@@ -807,6 +880,7 @@ body.Menzoberranzan section p {
     border-radius: 10px;
 }
 
+/* Alfheim específico */
 body.Alfheim main {
     max-width: 1200px;
     margin: 0 auto;
@@ -859,6 +933,7 @@ body.Alfheim section p {
     border-radius: 10px;
 }
 
+/* Valinor específico */
 body.Valinor main {
     max-width: 1200px;
     margin: 0 auto;
@@ -914,10 +989,6 @@ body.Valinor section p {
 /* ============================================
    RACES PAGE STYLES
    ============================================ */
-body.races {
-    color: #1c1b1a;
-}
-
 .container {
     width: 80%;
     display: flex;
@@ -1000,28 +1071,6 @@ body.races {
 .card:nth-child(3) a:hover {
     color: #cc83f0;
     text-shadow: 0 0 10px #cc83f0; 
-}
-
-body.races header {
-    font-family: "ring", serif;
-    font-size: 25px;
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    background: #64410055;
-    color: #000000;
-    text-shadow: 0 0 20px #fbff00b7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-body.races h1 {
-    background: none;
-    color: #000000;
-    -webkit-text-fill-color: unset;
-    margin: 0;
 }
 
 /* ============================================
@@ -1199,6 +1248,16 @@ body.races h1 {
     margin-top: 140px;
 }
 
+/* Efecto título vivo (breathing) */
+.breathing {
+    animation: breathing 4s ease-in-out infinite alternate;
+}
+
+@keyframes breathing {
+    from { transform: scale(1); }
+    to { transform: scale(1.04); }
+}
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -1278,6 +1337,21 @@ footer .author-item a {
 footer .author-item a:hover {
     color: #F5DEB3;
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+body.kingdoms footer .author-item a,
+body.Menzoberranzan footer .author-item a,
+body.Alfheim footer .author-item a,
+body.Valinor footer .author-item a {
+    color: #E8D5B7;
+}
+
+body.kingdoms footer .author-item a:hover,
+body.Menzoberranzan footer .author-item a:hover,
+body.Alfheim footer .author-item a:hover,
+body.Valinor footer .author-item a:hover {
+    color: #3FE2D2;
+    text-shadow: 0 0 8px rgba(63, 226, 210, 0.5);
 }
 
 /* ============================================

@@ -12,7 +12,6 @@
             <img src="imagenes/logo.png" alt="Home">
         </a>
         <h1><i>Alfheim</i></h1>
-        <div>
         <nav>           
             <a href="kingdoms.html">
                 <img src="imagenes/kingdoms.png_clear_same_size.png" alt="kingdoms">
@@ -22,7 +21,7 @@
                 <img src="imagenes/logo_396x387.png" alt="Menzoberranzan">
             </a>
             
-            <a href="Alfheim.html">
+            <a href="#" id="musicControl">
                 <img src="imagenes/Alfheim_cle.png" alt="Alfheim">
             </a>
             
@@ -30,7 +29,7 @@
                 <img src="imagenes/Valinor_clear (1)_same.png" alt="Valinor">
             </a>
         </nav>
-        </div>
+        <audio id="backgroundMusic" src="Audio/Alfleim.mp3" loop></audio>
     </header>
     
     <main>
@@ -90,6 +89,7 @@
         </section>
     </main>
 
+<<<<<<< HEAD
     <!-- FOOTER -->
     <footer>
         <h3>Desarrollo y Diseño</h3>
@@ -101,5 +101,20 @@
         </p>
     </footer>
 
+=======
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        
+        musicControl.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
+>>>>>>> origin/kingdoms
 </body>
 </html>
