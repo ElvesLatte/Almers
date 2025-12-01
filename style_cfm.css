@@ -21,11 +21,13 @@
 body {
     margin: 0;
     width: 100%;
-    min-height: 1vh;
+    /* asegurar que la página ocupe al menos la ventana y permita scroll */
+    min-height: 100vh;
     background-image: url('fondo/fondo5.jpg');
     background-repeat: 100% 100%;
     background-size: 100% 100%;
-    overflow: hidden;
+    /* permitir scroll para que el footer sea accesible */
+    overflow: auto;
     background-position: center, center;
     color: #1c1b1a;
     font-family: 'Ringbearer', serif;
