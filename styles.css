@@ -1,0 +1,1347 @@
+/* ============================================
+   FUENTES LOCALES
+   ============================================ */
+@font-face {
+    font-family: "Tengwar Annatar";
+    src: url("./fonts/tngan.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ring";
+    src: url("./fonts/ringbearer.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tngan';
+    src: url('fonts/tngan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Morris Roman";
+    src: url("fonts/MorrisRomanBlack.ttf") format("truetype");
+}
+
+/* ============================================
+   VARIABLES DE COLOR
+   ============================================ */
+:root {
+  --forest-dark: #1c3b32;
+  --forest-light: #385b4f;
+  --gold: #bfa76a;
+  --magic-blue: #2f4469;
+  --void: #4b3b63;
+  --paper: #eee6d2;
+  --night: #0f0f14;
+  --text-dark: #2b2b2b;
+  --text-soft: #5d6f68;
+  --cyan: #3FE2D2;
+}
+
+/* ============================================
+   RESET GENERAL
+   ============================================ */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   BODY - Estilos base con fuente Ringbearer
+   ============================================ */
+body {
+    font-family: "ring", serif;
+    padding: 0;
+    margin: 15px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Variante para index */
+body.body_index {
+    background-image: url(imagenes/fondo_index.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Variante para elves/habilities */
+body.body_elves {
+    background-image: url(imagenes/fondo_elves.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Kingdoms pages */
+body.kingdoms {
+    background-image: url(imagenes/fondito.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body.Menzoberranzan {
+    background-image: url(Menzoberranzan/02ec6bd51910267b8e6b7ee29638b268.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body.Alfheim {
+    background-image: url(Alfheim/Fonditoalf.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.Valinor {
+    background-image: url(Valinor/fondo2vali.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Races page */
+body.races {
+    background-image: url('fondo/fondo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* History page */
+.section-history {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
+        url("fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================================
+   HEADER - Módulo de Kingdoms (funcionando)
+   ============================================ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+/* Header específico para index */
+header.header_index {
+    background: linear-gradient(135deg, 
+        #3E2723 0%, 
+        #4E342E 15%, 
+        #5D4037 30%, 
+        #6D4C41 45%, 
+        #5D4037 60%, 
+        #4E342E 75%, 
+        #3E2723 90%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
+    border: 40px solid;
+    border-image: url(imagenes/frame_gold.png) 150 stretch;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Header para elves/habilities */
+header:not(.header_index):not(.section-history header) {
+    background: linear-gradient(135deg, 
+        #3E2723 0%, 
+        #4E342E 15%, 
+        #5D4037 30%, 
+        #6D4C41 45%, 
+        #5D4037 60%, 
+        #4E342E 75%, 
+        #3E2723 90%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
+    border: 40px solid;
+    border-image: url(imagenes/frame_gold.png) 150 stretch;
+    padding: 8px;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   HOME/LOGO BUTTON - Universal
+   ============================================ */
+.home-button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    border: 2px solid rgba(63, 226, 210, 0.3);
+    flex-shrink: 0;
+}
+
+/* Variantes de color según contexto */
+body.body_index .home-button,
+body.body_elves .home-button {
+    background: rgba(242, 233, 216, 0.1);
+    border-color: rgba(242, 233, 216, 0.3);
+}
+
+body.body_index .home-button:hover,
+body.body_elves .home-button:hover {
+    background: rgba(242, 233, 216, 0.25);
+    border-color: #F2E9D8;
+    box-shadow: 0 0 12px rgba(242, 233, 216, 0.5);
+}
+
+/* Para races/header específico */
+header[style*="background: #64410055"] .home-button {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+header[style*="background: #64410055"] .home-button:hover {
+    background: rgba(0, 0, 0, 0.25);
+    border-color: #000000;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Para kingdoms/other pages */
+body.kingdoms .home-button,
+body.Menzoberranzan .home-button,
+body.Alfheim .home-button,
+body.Valinor .home-button {
+    background: rgba(63, 226, 210, 0.1);
+    border-color: rgba(63, 226, 210, 0.3);
+}
+
+body.kingdoms .home-button:hover,
+body.Menzoberranzan .home-button:hover,
+body.Alfheim .home-button:hover,
+body.Valinor .home-button:hover {
+    background: rgba(63, 226, 210, 0.25);
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px rgba(63, 226, 210, 0.5);
+}
+
+/* Para history/gold color */
+.section-history .home-button {
+    background: rgba(191, 167, 106, 0.1);
+    border-color: rgba(191, 167, 106, 0.3);
+    margin: 20px 0;
+}
+
+.section-history .home-button:hover {
+    background: rgba(191, 167, 106, 0.25);
+    border-color: #bfa76a;
+    box-shadow: 0 0 12px rgba(191, 167, 106, 0.5);
+}
+
+/* Imagen del botón - universal */
+.home-button img {
+    width: 35px;
+    height: 35px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.home-button:hover img {
+    opacity: 1;
+    filter: brightness(1.3);
+}
+
+/* ============================================
+   TIPOGRAFÍA GENERAL
+   ============================================ */
+h1 {
+    background: linear-gradient(180deg, #FFFFF0 0%, #FFF8DC 20%, #F5DEB3 40%, #E8D5B7 60%, #D4C5A9 80%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+    font-size: 1em;
+}
+
+h2 {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:hover {
+    color: #5FFFF0;
+    text-shadow: 0 0 15px rgba(63, 226, 210, 0.6);
+}
+
+h3 {
+    background: linear-gradient(180deg, #FFFFF0 0%, #FFF8DC 20%, #F5DEB3 40%, #E8D5B7 60%, #D4C5A9 80%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    margin: 5px 0 0 0;
+    font-size: 0.7em;
+}
+
+h6 {
+    background: linear-gradient(180deg, #FFF8DC 0%, #F5DEB3 30%, #E8D5B7 70%, #F2E9D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin: 10px 20px;
+    font-size: 0.55em;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+p {
+    color: #F5F2E8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============================================
+   MUSIC CONTROL
+   ============================================ */
+.music-control {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav a {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+nav a:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 10px rgba(230, 212, 143, 0.8));
+}
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+nav img {
+    width: 90px;
+}
+
+/* ============================================
+   INFO & TEXT BOXES
+   ============================================ */
+div.info {
+    background-color: rgba(242, 233, 216, 0.9);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+div.text {
+    background-color: rgba(204, 222, 216, 0.9);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 15px;
+    color: #3E4E41;
+}
+
+/* ============================================
+   SECTION TITLE
+   ============================================ */
+.section-title {
+    background: linear-gradient(135deg, #213b0e, #b1c5a0);
+    border: 2px solid #C49B2A;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0 15px 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.section-title h2 {
+    color: #F2E9D8;
+    margin: 0;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1.5px;
+    background: none;
+    -webkit-text-fill-color: unset;
+}
+
+.section-title p {
+    color: #d9d9d9;
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ============================================
+   ENTRY BOX
+   ============================================ */
+.entry-box {
+    background: linear-gradient(to bottom, rgba(242, 233, 216, 0.95) 0%, rgba(232, 220, 200, 0.95) 100%);
+    border: 2px solid #8B7355;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.entry-box::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid #C49B2A;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.category-title {
+    color: #8B7355;
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 3px double #C49B2A;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   TRAIT ENTRY
+   ============================================ */
+.trait-entry {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 3px solid #A0826D;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.trait-entry:hover {
+    transform: translateX(4px);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.trait-entry h4 {
+    color: #5D4E37;
+    font-size: 17px;
+    margin: 0 0 6px 0;
+    font-weight: bold;
+}
+
+.trait-entry p {
+    color: #3E4E41;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.trait-entry ul {
+    margin: 8px 0 0 18px;
+    line-height: 1.6;
+}
+
+.trait-entry li {
+    color: #3E4E41;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* ============================================
+   TENGWAR MESSAGES
+   ============================================ */
+.elvish-secret {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 16px;
+    color: #C49B2A;
+    text-shadow: 0 0 6px rgba(196, 155, 42, 0.5);
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.elvish-secret:hover {
+    color: #FFD700;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.elvish-rune {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 24px;
+    color: #C49B2A;
+    text-align: center;
+    padding: 12px;
+    margin: 15px 0;
+    background: rgba(139, 115, 85, 0.1);
+    border-top: 1px solid #C49B2A;
+    border-bottom: 1px solid #C49B2A;
+    text-shadow: 0 0 8px rgba(196, 155, 42, 0.4);
+    letter-spacing: 2.5px;
+}
+
+.hidden-lore {
+    font-family: "Tengwar Annatar", serif;
+    font-size: 19px;
+    color: #A0826D;
+    background: linear-gradient(to right, transparent, rgba(196, 155, 42, 0.15), transparent);
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.hidden-lore:hover {
+    opacity: 1;
+    color: #C49B2A;
+    text-shadow: 0 0 10px rgba(196, 155, 42, 0.6);
+}
+
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+.set-text-font {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3E4E41;
+    margin: 12px 0;
+    padding: 0 10px;
+}
+
+/* ============================================
+   PORTAL NAVIGATION
+   ============================================ */
+.portal-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 50px auto;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+.portal-wrapper {
+    text-align: center;
+    position: relative;
+}
+
+.portal-link {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.portal-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: all 0.4s ease;
+    filter: brightness(0.9) drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Portal 1 - DORADO */
+.portal-wrapper:nth-child(1) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(1) .portal-link:hover {
+    animation: portal-pulse-gold 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-gold {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.9));
+    }
+}
+
+/* Portal 2 - VERDE */
+.portal-wrapper:nth-child(2) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(0, 255, 100, 0.8)) drop-shadow(0 0 40px rgba(0, 255, 100, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(2) .portal-link:hover {
+    animation: portal-pulse-green 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-green {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 100, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 255, 100, 0.9));
+    }
+}
+
+/* Portal 3 - AZUL OSCURO */
+.portal-wrapper:nth-child(3) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(10, 30, 120, 0.8)) drop-shadow(0 0 40px rgba(10, 30, 120, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(3) .portal-link:hover {
+    animation: portal-pulse-blue 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-blue {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(10, 30, 120, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(10, 30, 120, 0.9));
+    }
+}
+
+/* Portal 4 - CYAN */
+.portal-wrapper:nth-child(4) .portal-link:hover .portal-image {
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(0, 255, 255, 0.6));
+    transform: scale(1.05);
+}
+
+.portal-wrapper:nth-child(4) .portal-link:hover {
+    animation: portal-pulse-cyan 1.5s ease-in-out infinite;
+}
+
+@keyframes portal-pulse-cyan {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(0, 255, 255, 0.9));
+    }
+}
+
+.portal-title {
+    background: linear-gradient(180deg, #D4AF37 0%, #C19A2E 30%, #9B7F1E 70%, #8B6914 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 25px;
+    margin: 15px 0 8px 0;
+    font-family: "ring", serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.portal-description {
+    color: #3E2723;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 8px auto;
+    max-width: 280px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+    padding: 0 5px;
+}
+
+/* ============================================
+   ARTICULOS DE REINOS
+   ============================================ */
+main {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.kingdom-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.kingdom-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+    filter: brightness(1.1);
+}
+
+.kingdom-content h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.kingdom-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+body.Menzoberranzan main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Menzoberranzan .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Menzoberranzan section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Menzoberranzan section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Menzoberranzan section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Menzoberranzan section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Menzoberranzan section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+body.Alfheim main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Alfheim .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Alfheim section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Alfheim section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Alfheim section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Alfheim section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Alfheim section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+body.Valinor main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body.Valinor .intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 30px auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+body.Valinor section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+body.Valinor section .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+body.Valinor section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Valinor section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(63, 226, 210, 0.5);
+}
+
+body.Valinor section p {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* ============================================
+   RACES PAGE STYLES
+   ============================================ */
+body.races {
+    color: #1c1b1a;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px 0;
+    margin: 80px auto 40px;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    transition: all 400ms ease-in-out;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.card figure {
+    height: 400px;
+}
+
+.card figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10%);
+    cursor: pointer;
+}
+
+/* Aura azul - Elfo Primordial */
+.card:nth-child(1):hover {
+    box-shadow: 
+        0 0 15px #89d2f6,
+        0 0 30px #59889f,
+        0 0 45px #253942;
+    background-color: #6c8b9837;
+}
+
+/* Aura verde - Elfo de Bosque */
+.card:nth-child(2):hover {
+    box-shadow: 
+        0 0 15px #92f0b1,
+        0 0 30px #508c62,
+        0 0 45px #274630;
+    background-color: #00441137;
+}
+
+/* Aura morada - Elfo del Vacío */
+.card:nth-child(3):hover {
+    box-shadow: 
+        0 0 15px #cc83f0,
+        0 0 30px #86579d,
+        0 0 45px #402a4b;
+    background-color: #3b116537;
+}
+
+/* Links en tarjetas */
+.card:nth-child(1) a:hover {
+    color: #89d2f6;
+    text-shadow: 0 0 10px #89d2f6;
+}
+
+.card:nth-child(2) a:hover {
+    color: #92f0b1;
+    text-shadow: 0 0 10px #92f0b1;
+}
+
+.card:nth-child(3) a:hover {
+    color: #cc83f0;
+    text-shadow: 0 0 10px #cc83f0; 
+}
+
+body.races header {
+    font-family: "ring", serif;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    background: #64410055;
+    color: #000000;
+    text-shadow: 0 0 20px #fbff00b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+body.races h1 {
+    background: none;
+    color: #000000;
+    -webkit-text-fill-color: unset;
+    margin: 0;
+}
+
+/* ============================================
+   HISTORY PAGE SPECIFIC
+   ============================================ */
+.history-content {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(238, 230, 210, 0.92);
+    padding: 50px 40px;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-history header h2 {
+    font-family: "Tengwar Annatar", serif;
+    color: var(--forest-dark);
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+    background: none;
+    -webkit-text-fill-color: unset;
+}
+
+.subtitle {
+    color: var(--forest-light);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+
+.section-history h3 {
+    color: var(--forest-dark);
+    border-bottom: 2px solid var(--gold);
+    margin-top: 25px;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    font-size: 1.9rem;
+    background: none;
+    -webkit-text-fill-color: unset;
+    text-shadow: none;
+}
+
+.section-history h4 {
+    margin-bottom: 5px;
+    color: var(--forest-light);
+    font-size: 1.2rem;
+}
+
+.section-history article {
+    margin-bottom: 80px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    backdrop-filter: blur(2px);
+    display: block;
+    grid-template-columns: unset;
+    gap: unset;
+}
+
+.race, .city {
+    padding-left: 12px;
+    border-left: 3px solid var(--gold);
+    margin: 10px 0;
+}
+
+.legends ul, .elf-text ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.section-history ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.quickfacts {
+    background: rgba(191, 167, 106, 0.2);
+    padding: 15px 20px;
+    border-radius: 14px;
+    margin-top: 25px;
+}
+
+.quickfacts h4 {
+    color: var(--gold);
+}
+
+.history-footer {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 25px;
+    text-align: right;
+}
+
+.elf-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.elf-text {
+    flex: 1;
+    text-align: justify;
+    line-height: 1.75;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.elf-image {
+    width: 300px;
+    min-width: 260px;
+    max-width: 40%;
+    text-align: center;
+}
+
+.elf-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.elf-image img:hover {
+    transform: scale(1.07);
+    filter: brightness(1.08);
+}
+
+/* Secciones por raza */
+.primordials {
+    background: linear-gradient(to right, var(--magic-blue), var(--forest-dark));
+    color: var(--paper);
+}
+
+.primordials h3, .primordials p, .primordials li {
+    color: var(--paper);
+}
+
+.forest-elves {
+    background: linear-gradient(to right, var(--forest-dark), var(--forest-light));
+    color: var(--paper);
+}
+
+.forest-elves h3, .forest-elves p, .forest-elves li {
+    color: var(--paper);
+}
+
+.void-elves {
+    background: linear-gradient(to right, var(--night), var(--void));
+    color: #d0d0d0;
+}
+
+.void-elves h3, .void-elves p, .void-elves li {
+    color: #d0d0d0;
+}
+
+.primordials-image {
+    margin-top: 250px;
+    margin-left: 30px;
+}
+
+.bosque-image {
+    margin-top: 160px;
+}
+
+.vacio-image {
+    margin-top: 140px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: linear-gradient(135deg, rgba(47, 59, 27, 0.95) 0%, rgba(60, 74, 34, 0.95) 50%, rgba(47, 59, 27, 0.95) 100%);
+    border-top: 3px solid #C49B2A;
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer para kingdoms */
+body.kingdoms footer,
+body.Menzoberranzan footer,
+body.Alfheim footer,
+body.Valinor footer {
+    background: linear-gradient(135deg, rgba(63, 226, 210, 0.1) 0%, rgba(47, 68, 105, 0.15) 50%, rgba(63, 226, 210, 0.1) 100%);
+    border-top: 2px solid var(--cyan);
+}
+
+body.kingdoms footer h3,
+body.Menzoberranzan footer h3,
+body.Alfheim footer h3,
+body.Valinor footer h3 {
+    color: var(--cyan);
+}
+
+body.kingdoms footer .author-item,
+body.Menzoberranzan footer .author-item,
+body.Alfheim footer .author-item,
+body.Valinor footer .author-item {
+    border-right: 1px solid var(--cyan);
+}
+
+/* Footer para races */
+body.races footer {
+    background: linear-gradient(135deg, rgba(100, 65, 0, 0.3) 0%, rgba(28, 27, 26, 0.5) 50%, rgba(100, 65, 0, 0.3) 100%);
+    border-top: 2px solid #bfa76a;
+}
+
+footer h3 {
+    color: #F2E9D8;
+    font-family: "ring", serif;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+footer p {
+    color: #E8D5B7;
+    font-family: "ring", serif;
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.8;
+}
+
+footer .author-item {
+    display: inline-block;
+    margin: 5px 15px;
+    padding: 0 10px;
+    border-right: 1px solid #C49B2A;
+}
+
+footer .author-item:last-child {
+    border-right: none;
+}
+
+footer .author-item a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .author-item a:hover {
+    color: #F5DEB3;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .portal-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .elf-layout {
+        flex-direction: column;
+    }
+
+    .elf-image {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .portal-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .portal-image {
+        max-width: 300px;
+    }
+    
+    .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .section-history {
+        padding: 25px 15px;
+    }
+
+    .section-history header h2 {
+        font-size: 1.7rem;
+    }
+
+    .section-history h3 {
+        font-size: 1.45rem;
+    }
+    
+    .primordials-image,
+    .bosque-image,
+    .vacio-image {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    article {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
