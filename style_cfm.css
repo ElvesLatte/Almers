@@ -22,10 +22,11 @@ body {
     margin: 0;
     width: 100%;
     min-height: 1vh;
-    background-image: url('fondo/fondo2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-image: url('fondo/fondo5.jpg');
+    background-repeat: 100% 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+    background-position: center, center;
     color: #1c1b1a;
     font-family: 'Ringbearer', serif;
 }
@@ -33,14 +34,13 @@ body {
     width: 80%;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     padding: 20px 0;
     margin: 80px auto 40px;
 }
 .card {
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 300px;
     transition: all 400ms ease-in-out;
     overflow: hidden;
     padding-bottom: 20px;
@@ -53,7 +53,7 @@ body {
     margin-bottom: 15px;
 }
 .card figure{
-    height: 400px;
+    height: 300px;
 }
 .card figure img{
     height: 100%;
@@ -97,10 +97,13 @@ header {
     font-size: 25px;
     text-align: center;
     width: 100%;
-    margin-top: 20px;
-    background: #64410055;
+    margin-top: 50px;
+    background: #64410055, center;
     color: #000000;
-    text-shadow: 0 0 20px #fbff00b7; 
+    text-shadow:
+        0 0 15px hwb(51 35% 2%),
+        0 0 30px #9b8f23,
+        0 0 45px #6a6714;; 
 }
 
 h1, h2 {
@@ -110,6 +113,7 @@ h1, h2 {
 a {
     color: rgb(0, 0, 0);
 }
+
 
 /* Enlaces en la tarjeta 1 - Primordial */
 .card:nth-child(1) a:hover {
@@ -128,3 +132,30 @@ a {
     color: #cc83f0;
     text-shadow: 0 0 10px #cc83f0; 
 }
+
+/* Logo en esquina superior izquierda */
+.logo-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(232, 230, 230, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 
+        0 0 15px #fff980,
+        0 0 30px #a8a354,
+        0 0 45px #716e38,
+        0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
