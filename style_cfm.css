@@ -22,10 +22,11 @@ body {
     margin: 0;
     width: 100%;
     min-height: 1vh;
-    background-image: url('fondo/fondo2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-image: url('fondo/fondo5.jpg');
+    background-repeat: 100% 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+    background-position: center, center;
     color: #1c1b1a;
     font-family: 'Ringbearer', serif;
 }
@@ -33,14 +34,13 @@ body {
     width: 80%;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     padding: 20px 0;
     margin: 80px auto 40px;
 }
 .card {
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 300px;
     transition: all 400ms ease-in-out;
     overflow: hidden;
     padding-bottom: 20px;
@@ -53,7 +53,7 @@ body {
     margin-bottom: 15px;
 }
 .card figure{
-    height: 400px;
+    height: 300px;
 }
 .card figure img{
     height: 100%;
@@ -97,48 +97,10 @@ header {
     font-size: 25px;
     text-align: center;
     width: 100%;
-    margin-top: 20px;
-    background: #64410055;
+    margin-top: 50px;
+    background: #64410055, center;
     color: #000000;
-    text-shadow: 0 0 20px #fbff00b7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.home-button {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.1);
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    flex-shrink: 0;
-}
-
-.home-button:hover {
-    background: rgba(0, 0, 0, 0.25);
-    border-color: #000000;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
-}
-
-.home-button img {
-    width: 35px;
-    height: 35px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.home-button:hover img {
-    opacity: 1;
-    filter: brightness(0.7);
+    text-shadow: 0 0 20px #fbff00b7; 
 }
 
 h1, h2 {
@@ -149,6 +111,7 @@ h1, h2 {
 a {
     color: rgb(0, 0, 0);
 }
+
 
 /* Enlaces en la tarjeta 1 - Primordial */
 .card:nth-child(1) a:hover {
@@ -166,54 +129,4 @@ a {
 .card:nth-child(3) a:hover {
     color: #cc83f0;
     text-shadow: 0 0 10px #cc83f0; 
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-footer {
-    background: linear-gradient(135deg, rgba(100, 65, 0, 0.3) 0%, rgba(28, 27, 26, 0.5) 50%, rgba(100, 65, 0, 0.3) 100%);
-    border-top: 2px solid #bfa76a;
-    padding: 25px 20px;
-    margin-top: 40px;
-    text-align: center;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
-}
-
-footer h3 {
-    color: #bfa76a;
-    font-family: 'Ringbearer', serif;
-    font-size: 16px;
-    margin: 0 0 12px 0;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-footer p {
-    color: #eee6d2;
-    font-size: 13px;
-    margin: 0;
-    line-height: 1.6;
-}
-
-footer .author-item {
-    display: inline-block;
-    margin: 3px 10px;
-    padding: 0 6px;
-    border-right: 1px solid #bfa76a;
-}
-
-footer .author-item:last-child {
-    border-right: none;
-}
-
-footer .author-item a {
-    color: #bfa76a;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-footer .author-item a:hover {
-    color: #d4c5a9;
-    text-shadow: 0 0 8px rgba(191, 167, 106, 0.5);
 }
