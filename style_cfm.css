@@ -158,14 +158,16 @@ a {
         0 0 45px #716e38,
         0 4px 8px rgba(0, 0, 0, 0.3);
 }
+/* ============================================
+   FOOTER - estilo arena pálido -> mostaza
+   ============================================ */
 footer {
- footer {
-    /* gradiente: arena pálido -> mostaza (coordinado con styles.css) */
     background: linear-gradient(180deg, #F6E9C8 0%, #F2E3B3 40%, #E2C67D 70%, #C49B2A 100%);
     border-top: 3px solid rgba(196,155,42,0.9);
     padding: 24px 18px;
     margin-top: 60px;
     box-shadow: 0 -6px 14px rgba(0,0,0,0.12);
+    color: #4a3f2b;
 }
 
 footer .footer-inner {
@@ -196,3 +198,5 @@ footer .authors { display: flex; gap: 12px; align-items: center; flex-wrap: wrap
 footer .author-item { padding: 6px 10px; border-radius: 8px; background: rgba(255,255,255,0.06); color: #5a4724; }
 
 footer .author-item a { color: #5a4724; text-decoration: none; font-weight: 600; }
+
+footer .author-item a:hover { color: #2f250f; text-decoration: underline; }
