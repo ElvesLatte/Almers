@@ -100,13 +100,15 @@ header {
     margin-top: 50px;
     background: #64410055, center;
     color: #000000;
-    text-shadow: 0 0 20px #fbff00b7; 
+    text-shadow:
+        0 0 15px hwb(51 35% 2%),
+        0 0 30px #9b8f23,
+        0 0 45px #6a6714;; 
 }
 
 h1, h2 {
     color: lch(0% 0 0);
     -webkit-text-stroke: 2px rgba(0, 0, 0, 0.37);
-    margin: 0;
 }
 a {
     color: rgb(0, 0, 0);
@@ -130,3 +132,30 @@ a {
     color: #cc83f0;
     text-shadow: 0 0 10px #cc83f0; 
 }
+
+/* Logo en esquina superior izquierda */
+.logo-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(232, 230, 230, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 
+        0 0 15px #fff980,
+        0 0 30px #a8a354,
+        0 0 45px #716e38,
+        0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
