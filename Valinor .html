@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valinor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="Valinor">
+    <header>
+        <h1><i>Valinor</i></h1>
+        <nav>           
+            <a href="kingdoms.html">
+                <img src="imagenes/kingdoms.png_clear_same_size.png" alt="kingdoms">
+            </a>
+            
+            <a href="Menzoberranzan.html">
+                <img src="imagenes/logo_396x387.png" alt="Menzoberranzan">
+            </a>
+            
+            <a href="Alfheim.html">
+                <img src="imagenes/Alfheim_cle.png" alt="Alfheim">
+            </a>
+            
+            <a href="#" id="musicControl">
+                <img src="imagenes/Valinor_clear (1)_same.png" alt="Valinor">
+            </a>
+        </nav>
+        <audio id="backgroundMusic" src="Audio/Valinor.mp3" loop></audio>
+    </header>
+
+    <main>
+        <p class="intro">Valinor, tierra de los inmortales y hogar de los elfos más puros</p>
+        <section>
+            <h2>Población</h2>
+            <div class="image-grid">
+                <img src="Valinor/habitantesvali.png" alt="Habitantes">
+                <img src="Valinor/poblacionvali.png" alt="Poblacion">
+            </div>
+            <p>In Valinor, light does more than illuminate: it whispers. The people of the blessed realm move among golden veils that conceal ancient truths, and their gazes, serene yet unfathomable, seem to pierce the soul of all who behold them. Every gesture, every word, carries the echo of ages no mortal remembers. In this land where light never dies, the inhabitants of Valinor guard secrets as old as creation itself… and reveal only what destiny allows to be seen.</p>
+            <p>Among the eternal radiance of Valinor, its inhabitants move like figures shaped from ancient light, wrapped in silences that seem to hold echoes of an unreachable age. Their gazes, gentle yet unfathomable, reveal a wisdom no mortal could ever fully comprehend. </p>
+        </section>
+
+        <section>
+            <h2>Mapa</h2>
+            <div class="image-grid">
+                <img src="Valinor/maparei.png" alt="Mapa">
+                <img src="Valinor/mapaciu.png" alt="Mapa">
+            </div>
+            <p>Exploring the city of Valinor is to enter a labyrinth of living light, where the paths seem drawn by invisible hands and the rivers shimmer with reflections that do not belong to the mortal world. The golden towers of the High City rise like divine beacons, concealing ancestral secrets behind their flawless radiance. </p>
+            <p>The realm of Valinor unfolds like a golden tapestry woven by divine hands, yet beneath its perfect radiance pulse secrets few can grasp. The plains shimmer with a light that does not come from the sun, and the Celestial Sea murmurs ancient melodies that seem to call out to those who venture too near. Araman, vast and silent, hides paths that reveal themselves only to the worthy, while in Laurelin the land vibrates with echoes of primordial light. </p>
+        </section>
+
+        <section>
+            <h2>Ciudad</h2>
+            <div class="image-grid">
+                <img src="Valinor/ciudadvali.png" alt="Ciudad">
+                <img src="Valinor/Castillovali.png" alt="Reino">
+            </div>
+            <p>The city of Valinor rises like a horizon of impossible light, where golden towers seem to emerge more from a dream than from stone. Its bridges cross waters so still they reflect skies that do not belong to this world, and the gardens, eternally in bloom, conceal paths that sometimes exist… and sometimes do not. </p>
+            <p>The castle of Valinor shines as though forged from the very light of dawn, yet beneath its golden radiance one can sense something deeper and far more ancient. Its towers, rising like prayers toward the eternal sky, seem to thrum with a silent murmur no mortal has ever been able to decipher.
+</p>
+        </section>
+    </main>
+
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        
+        musicControl.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        });
+    </script>
+</body>
+</html>

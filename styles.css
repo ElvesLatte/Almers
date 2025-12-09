@@ -16,13 +16,6 @@
 }
 
 @font-face {
-    font-family: 'Tngan';
-    src: url('fonts/tngan.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "Morris Roman";
     src: url("fonts/MorrisRomanBlack.ttf") format("truetype");
 }
@@ -137,7 +130,7 @@ body.races {
 }
 
 /* ============================================
-   HEADER - Módulo de Kingdoms (funcionando)
+   HEADER
    ============================================ */
 header {
     display: flex;
@@ -145,44 +138,6 @@ header {
     justify-content: flex-start;
     gap: 20px;
     padding: 15px 20px;
-}
-
-/* Header específico para index */
-header.header_index {
-    background: linear-gradient(135deg, 
-        #3E2723 0%, 
-        #4E342E 15%, 
-        #5D4037 30%, 
-        #6D4C41 45%, 
-        #5D4037 60%, 
-        #4E342E 75%, 
-        #3E2723 90%);
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
-    border: 40px solid;
-    border-image: url(imagenes/frame_gold.png) 150 stretch;
-    border-radius: 12px;
-    position: relative;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* Header para elves/habilities */
-header:not(.header_index):not(.section-history header) {
-    background: linear-gradient(135deg, 
-        #3E2723 0%, 
-        #4E342E 15%, 
-        #5D4037 30%, 
-        #6D4C41 45%, 
-        #5D4037 60%, 
-        #4E342E 75%, 
-        #3E2723 90%);
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
-    border: 40px solid;
-    border-image: url(imagenes/frame_gold.png) 150 stretch;
-    padding: 8px;
-    border-radius: 12px;
-    position: relative;
-    margin-bottom: 15px;
 }
 
 /* ============================================
@@ -214,18 +169,6 @@ body.body_elves .home-button:hover {
     background: rgba(242, 233, 216, 0.25);
     border-color: #F2E9D8;
     box-shadow: 0 0 12px rgba(242, 233, 216, 0.5);
-}
-
-/* Para races/header específico */
-header[style*="background: #64410055"] .home-button {
-    background: rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.3);
-}
-
-header[style*="background: #64410055"] .home-button:hover {
-    background: rgba(0, 0, 0, 0.25);
-    border-color: #000000;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Para kingdoms/other pages */
@@ -550,17 +493,6 @@ div.text {
     opacity: 1;
     color: #C49B2A;
     text-shadow: 0 0 10px rgba(196, 155, 42, 0.6);
-}
-
-/* ============================================
-   TEXT UTILITIES
-   ============================================ */
-.set-text-font {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #3E4E41;
-    margin: 12px 0;
-    padding: 0 10px;
 }
 
 /* ============================================
