@@ -3,22 +3,25 @@
    ============================================ */
 @font-face {
     font-family: "Tengwar Annatar";
-    src: url("./fonts/tngan.ttf") format("truetype");
+    src: url("fonts/tngan.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "ring";
-    src: url("./fonts/ringbearer.ttf") format("truetype");
+    src: url("fonts/ringbearer.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
+<<<<<<< HEAD
 @font-face {
     font-family: "Morris Roman";
     src: url("fonts/MorrisRomanBlack.ttf") format("truetype");
 }
+=======
+>>>>>>> e46b863384bcb7d60136846c8a7c5c076496999b
 
 /* ============================================
    VARIABLES DE COLOR
@@ -107,30 +110,20 @@ body.Valinor {
 
 /* Races page */
 body.races {
-    background-image: url('fondo/fondo2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('fondo/fondo5.jpg');
+    background-repeat: 100% 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
     background-position: center center;
-}
-
-/* History page */
-.section-history {
-    width: 100%;
-    min-height: 100vh;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:
-        radial-gradient(circle at top, rgba(47,68,105,0.55), rgba(15,15,20,0.95)),
-        url("fondo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    color: #1c1b1a;
 }
 
 /* ============================================
+<<<<<<< HEAD
    HEADER
+=======
+   HEADER STYLES
+>>>>>>> e46b863384bcb7d60136846c8a7c5c076496999b
    ============================================ */
 header {
     display: flex;
@@ -140,6 +133,61 @@ header {
     padding: 15px 20px;
 }
 
+<<<<<<< HEAD
+=======
+/* Header para index/elves - Estilo madera */
+header.header_index,
+body.body_index header,
+body.body_elves header {
+    background: linear-gradient(135deg, 
+        #3E2723 0%, 
+        #4E342E 15%, 
+        #5D4037 30%, 
+        #6D4C41 45%, 
+        #5D4037 60%, 
+        #4E342E 75%, 
+        #3E2723 90%);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), inset 0 2px 4px rgba(0,0,0,0.4);
+    border: 40px solid;
+    border-image: url(imagenes/frame_gold.png) 150 stretch;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 8px;
+    font-family: "ring", serif;
+    font-size: 28px;
+}
+
+/* Header para races - Estilo amarillo */
+body.races header {
+    font-family: "ring", serif;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    background: #64410055;
+    color: #000000;
+    text-shadow: 0 0 20px #fbff00b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Header para kingdoms pages - Estilo cyan */
+body.kingdoms header,
+body.Menzoberranzan header,
+body.Alfheim header,
+body.Valinor header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+>>>>>>> e46b863384bcb7d60136846c8a7c5c076496999b
 /* ============================================
    HOME/LOGO BUTTON - Universal
    ============================================ */
@@ -854,15 +902,14 @@ body.races {
     width: 80%;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     padding: 20px 0;
     margin: 80px auto 40px;
 }
 
 .card {
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 300px;
     transition: all 400ms ease-in-out;
     overflow: hidden;
     padding-bottom: 20px;
@@ -877,7 +924,7 @@ body.races {
 }
 
 .card figure {
-    height: 400px;
+    height: 300px;
 }
 
 .card figure img {
@@ -934,36 +981,14 @@ body.races {
     text-shadow: 0 0 10px #cc83f0; 
 }
 
-body.races header {
-    font-family: "ring", serif;
-    font-size: 25px;
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
-    background: #64410055;
-    color: #000000;
-    text-shadow: 0 0 20px #fbff00b7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-body.races h1 {
-    background: none;
-    color: #000000;
-    -webkit-text-fill-color: unset;
-    margin: 0;
-}
-
 /* ============================================
    HISTORY PAGE SPECIFIC
    ============================================ */
 .history-content {
-    max-width: 1200px;
+    max-width: 1500px;
     width: 100%;
     background: rgba(238, 230, 210, 0.92);
-    padding: 50px 40px;
+    padding: 40px 35px;
     border-radius: 22px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
     display: flex;
@@ -975,7 +1000,7 @@ body.races h1 {
     color: var(--forest-dark);
     font-size: 2.4rem;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background: none;
     -webkit-text-fill-color: unset;
 }
@@ -984,30 +1009,30 @@ body.races h1 {
     color: var(--forest-light);
     font-size: 1rem;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
     letter-spacing: 0.05em;
 }
 
 .section-history h3 {
     color: var(--forest-dark);
     border-bottom: 2px solid var(--gold);
-    margin-top: 25px;
-    padding-bottom: 6px;
-    margin-bottom: 15px;
-    font-size: 1.9rem;
+    margin-top: 15px;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
     background: none;
     -webkit-text-fill-color: unset;
     text-shadow: none;
 }
 
 .section-history h4 {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: var(--forest-light);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 }
 
 .section-history article {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.75);
@@ -1016,6 +1041,8 @@ body.races h1 {
     display: block;
     grid-template-columns: unset;
     gap: unset;
+    height: auto;
+    overflow: hidden;
 }
 
 .race, .city {
@@ -1025,13 +1052,13 @@ body.races h1 {
 }
 
 .legends ul, .elf-text ul {
-    padding-left: 20px;
-    margin-top: 10px;
+    padding-left: 18px;
+    margin-top: 8px;
 }
 
 .section-history ul li {
-    margin-bottom: 8px;
-    line-height: 1.6;
+    margin-bottom: 6px;
+    line-height: 1.5;
     color: var(--text-dark);
 }
 
@@ -1055,45 +1082,48 @@ body.races h1 {
 
 .elf-layout {
     display: flex;
-    gap: 30px;
+    gap: 22px;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
 .elf-text {
     flex: 1;
     text-align: justify;
-    line-height: 1.75;
-    font-size: 1rem;
+    line-height: 1.65;
+    font-size: 0.95rem;
     color: var(--text-dark);
 }
 
 .elf-image {
     width: 300px;
-    min-width: 260px;
-    max-width: 40%;
+    min-width: 240px;
+    max-width: 38%;
+    height: auto;
     text-align: center;
+    margin-top: 70px;
 }
 
 .elf-image img {
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 14px;
     box-shadow: 0 10px 22px rgba(0,0,0,0.25);
     object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .elf-image img:hover {
-    transform: scale(1.07);
-    filter: brightness(1.08);
+    transform: scale(1.05);
 }
 
 /* Secciones por raza */
 .primordials {
-    background: linear-gradient(to right, var(--magic-blue), var(--forest-dark));
+    background: radial-gradient(circle at top, #5b7cff, #1c3b65);
     color: var(--paper);
+    box-shadow: inset 0 0 80px rgba(255,215,150,0.3);
 }
 
 .primordials h3, .primordials p, .primordials li {
@@ -1101,8 +1131,9 @@ body.races h1 {
 }
 
 .forest-elves {
-    background: linear-gradient(to right, var(--forest-dark), var(--forest-light));
+    background: radial-gradient(circle at top, #4fa36a, #1f4d3b);
     color: var(--paper);
+    box-shadow: inset 0 0 80px rgba(150,255,180,0.3);
 }
 
 .forest-elves h3, .forest-elves p, .forest-elves li {
@@ -1110,106 +1141,115 @@ body.races h1 {
 }
 
 .void-elves {
-    background: linear-gradient(to right, var(--night), var(--void));
+    background: radial-gradient(circle at top, #3c2a55, #0a0215);
     color: #d0d0d0;
+    box-shadow: inset 0 0 80px rgba(160,120,255,0.25);
 }
 
 .void-elves h3, .void-elves p, .void-elves li {
     color: #d0d0d0;
 }
 
-.primordials-image {
-    margin-top: 250px;
-    margin-left: 30px;
+/* Efecto título vivo */
+.breathing {
+  animation: breathing 4s ease-in-out infinite alternate;
 }
 
-.bosque-image {
-    margin-top: 160px;
-}
-
-.vacio-image {
-    margin-top: 140px;
+@keyframes breathing {
+  from { transform: scale(1); }
+  to { transform: scale(1.04); }
 }
 
 /* ============================================
-   FOOTER
+   FOOTER (reorganizado)
    ============================================ */
 footer {
-    background: linear-gradient(135deg, rgba(47, 59, 27, 0.95) 0%, rgba(60, 74, 34, 0.95) 50%, rgba(47, 59, 27, 0.95) 100%);
-    border-top: 3px solid #C49B2A;
-    padding: 30px 20px;
+    /* gradiente: arena pálido -> mostaza */
+    background: linear-gradient(180deg, #F6E9C8 0%, #F2E3B3 40%, #E2C67D 70%, #C49B2A 100%);
+    border-top: 3px solid rgba(196,155,42,0.9);
+    padding: 28px 20px;
     margin-top: 60px;
-    text-align: center;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -6px 18px rgba(0,0,0,0.12);
+    color: var(--text-dark);
 }
 
-/* Footer para kingdoms */
+/* Footer layout: centrado y responsivo */
+footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+footer h3 {
+    color: #5a4724;
+    font-family: "ring", serif;
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+footer p {
+    color: #4a3f2b;
+    font-family: "ring", serif;
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Autores: organizado en fila, con separación y buen contraste */
+footer .authors {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .author-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    color: #5a4724;
+    font-size: 14px;
+}
+
+footer .author-item a {
+    color: #5a4724;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer .author-item a:hover {
+    color: #2f250f;
+}
+
+/* Variantes por contexto (si se quiere destacar en kingdoms/races) */
 body.kingdoms footer,
 body.Menzoberranzan footer,
 body.Alfheim footer,
 body.Valinor footer {
-    background: linear-gradient(135deg, rgba(63, 226, 210, 0.1) 0%, rgba(47, 68, 105, 0.15) 50%, rgba(63, 226, 210, 0.1) 100%);
-    border-top: 2px solid var(--cyan);
+    background: linear-gradient(180deg, #E8F7F5 0%, #D4F0EC 100%);
+    border-top-color: var(--cyan);
 }
 
-body.kingdoms footer h3,
-body.Menzoberranzan footer h3,
-body.Alfheim footer h3,
-body.Valinor footer h3 {
-    color: var(--cyan);
-}
-
-body.kingdoms footer .author-item,
-body.Menzoberranzan footer .author-item,
-body.Alfheim footer .author-item,
-body.Valinor footer .author-item {
-    border-right: 1px solid var(--cyan);
-}
-
-/* Footer para races */
 body.races footer {
-    background: linear-gradient(135deg, rgba(100, 65, 0, 0.3) 0%, rgba(28, 27, 26, 0.5) 50%, rgba(100, 65, 0, 0.3) 100%);
-    border-top: 2px solid #bfa76a;
-}
-
-footer h3 {
-    color: #F2E9D8;
-    font-family: "ring", serif;
-    font-size: 18px;
-    margin: 0 0 15px 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-
-footer p {
-    color: #E8D5B7;
-    font-family: "ring", serif;
-    font-size: 14px;
-    margin: 8px 0;
-    line-height: 1.8;
-}
-
-footer .author-item {
-    display: inline-block;
-    margin: 5px 15px;
-    padding: 0 10px;
-    border-right: 1px solid #C49B2A;
-}
-
-footer .author-item:last-child {
-    border-right: none;
-}
-
-footer .author-item a {
-    color: #FFD700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-footer .author-item a:hover {
-    color: #F5DEB3;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    /* un tono ligeramente más cálido para races */
+    background: linear-gradient(180deg, #FBF3E6 0%, #F6E9C8 100%);
+    border-top-color: #C49B2A;
 }
 
 /* ============================================
@@ -1226,8 +1266,24 @@ footer .author-item a:hover {
     }
 
     .elf-image {
-        width: 75%;
-        margin: 0 auto;
+        width: 80%;
+        margin: 20px auto 0;
+    }
+    
+    .container {
+        width: 90%;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .elf-layout {
+        flex-direction: column;
+    }
+
+    .elf-image {
+        width: 80%;
+        margin: 20px auto 0;
     }
 }
 
@@ -1254,7 +1310,7 @@ footer .author-item a:hover {
     }
     
     .section-history {
-        padding: 25px 15px;
+        padding: 30px 15px;
     }
 
     .section-history header h2 {
@@ -1262,7 +1318,7 @@ footer .author-item a:hover {
     }
 
     .section-history h3 {
-        font-size: 1.45rem;
+        font-size: 1.4rem;
     }
     
     .primordials-image,
@@ -1275,5 +1331,23 @@ footer .author-item a:hover {
     article {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-history {
+        padding: 25px 15px;
+    }
+
+    .section-history header h2 {
+        font-size: 1.7rem;
+    }
+
+    .section-history h3 {
+        font-size: 1.45rem;
+    }
+
+    article {
+        padding: 15px;
     }
 }
